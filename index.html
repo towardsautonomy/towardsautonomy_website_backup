@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Towards Autonomy</title>
+        <meta name="description" content="A one-stop shop for any information on the self-driving technology. This website explores some major components needed to achieve/assist autonomy in vehicles/robotics like Computer Vision, Deep Learning, Path Planning, Sensor Fusion, Robotics, Controls, V2X.">
+        <meta name="keywords" content="Self-Driving Cars,Autonomous Car,Connected Car,Autonomy,Computer Vision,Deep Learning,Path Planning,Sensor Fusion,Robotics,Controls,V2X">
+        <meta name="author" content="Shubham Shrivastava">
+        
+         <!-- For LinkedIn -->
+        <meta prefix="og: http://ogp.me/ns#" property='og:description' content="A one-stop shop for any information on the self-driving technology. This website explores some major components needed to achieve/assist autonomy in vehicles/robotics like Computer Vision, Deep Learning, Path Planning, Sensor Fusion, Robotics, Controls, V2X.">
+        <meta prefix="og: http://ogp.me/ns#" property='og:image' content='img/semseg.png'/>
+    
+        <!-- Google AdSense -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9061967281071719",
+            enable_page_level_ads: true
+          });
+        </script>
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--<meta http-equiv="x-ua-compatible" content="ie=edge">-->
+
+        <!-- Font Awesome -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300,300italic,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+        <!-- Material Design Bootstrap -->
+        <link href="css/materialize.css" rel="stylesheet">
+
+        <!-- Magnific-popup css -->
+        <link href="css/magnific-popup.css" rel="stylesheet">
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+        <!--<link href="css/progressbar.css" rel="stylesheet">-->
+
+        <!-- Material Design Bootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet">
+
+
+
+        <!-- Your custom styles (optional) -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-custom">
+        <!-- Start your project here-->
+        <!--Navbar-->
+
+        <div class='preloader'><div class='loaded'>&nbsp;</div></div>
+
+        <nav class="navbar navbar-fixed-top navbar-custom">
+            <!--Collapse button-->
+            <div class="container">
+                <a href="#" data-activates="mobile-menu" class="button-collapse right"><i class="fa fa-bars"></i></a>
+
+                <!-- Content for large and medium screens-->
+                <div class="navbar-custom">
+                    <!--Navbar Brand-->
+                    <a class="navbar-brand" href="#home"><img src="img/logo.png" alt="" /></a>
+                    <!--Links-->
+                    <ul class="nav pull-right hidden-md-down text-uppercase role="navigation">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#components">Components</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#collaborators">Collaborators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Content for mobile devices-->
+                <div class="navbar-mobile">
+
+                    <ul class="side-nav" id="mobile-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#components">Components</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#collaborators">Collaborators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+        <div id="home" class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="img/semseg.gif">
+                    <div class="caption center-align">
+                        <div class="single_home">
+                            <h2 style="color: white;
+                                text-align:center;
+                                font-size: 4rem;
+                                line-height: 100%;
+                                padding: 1px 1px 1px 1px;
+                                background-color: rgba(0, 0, 255,.3);
+                                overflow: visible;
+                                text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;">
+                                TOWARDS AUTONOMY</h2>
+                            <div style="background-color:black;color:white;opacity:0.8;padding-top: 0.7rem;padding-bottom: 0.1rem;padding-left: 1rem;padding-right: 1rem">
+                                <p>TAKING ONE STEP AT A TIME TOWARDS BRINGING AUTONOMY TO THE REAL WORLD</p>
+                            </div>
+                            <br><a href="#about" class="explore-button" role="button">Explore</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/lane_veh.gif">
+                    <div class="caption center-align">
+                        <div class="single_home">
+                            <h2 style="color: white;
+                                text-align:center;
+                                font-size: 4rem;
+                                line-height: 100%;
+                                padding: 1px 1px 1px 1px;
+                                background-color: rgba(0, 0, 255,.3);
+                                overflow: visible;
+                                text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;">
+                                TOWARDS AUTONOMY</h2>
+                            <div style="background-color:black;color:white;opacity:0.8;padding-top: 0.7rem;padding-bottom: 0.1rem;padding-left: 1rem;padding-right: 1rem">
+                                <p>TAKING ONE STEP AT A TIME TOWARDS BRINGING AUTONOMY TO THE REAL WORLD</p>
+                            </div>
+                            <br><a href="#about" class="explore-button" role="button">Explore</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main_about_area">
+                            <div class="head_title center m-y-3 wow fadeInUp">
+                                <h2>What is this Site about</h2>
+                                <p>This website explores some major components needed to achieve/assist autonomy in vehicles/robotics like Computer Vision, Deep Learning, Path Planning, Sensor Fusion, Robotics, Controls, V2X. This webpage talks about some of these components and discusses the results obtained using different techniques. We also provide code and instructions for some projects to try them yourself. Please contact <a href="#shubham">Shubham Shrivastava</a> if you want to collaborate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <hr style="height:7px" width="100%" align="center" color="green"></hr>
+        </section><!-- End of About Section-->
+
+
+        <section id="components" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main_service_area">
+                            <div class="head_title center m-y-3 wow fadeInUp">
+                                <h2>Components of Autonomous Driving</h2>
+                            </div>
+                            <div class="row">
+                                <div id="computer_vision" class="col-md-4">
+                                    <div class="jumbotron single_service  wow fadeInLeft">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-camera m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center text-xs-center">
+                                            <h4>Computer Vision</h4>
+                                            <p>Computer Vision is a significant component of any self-driving car. They provide self-driving cars 360 degrees of visibility around the car at up to 250 meters of range.<br><br></p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="computer_vision" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="deep_learning" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInUp">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-connectdevelop m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center text-xs-center">
+                                            <h4>Deep Learning</h4>
+                                            <p>Deep Learning plays a huge role in Autonomous Driving. It is a key technology that helps a self-driving car in multiple aspects right from perception to driving the car itself.<br><br></p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="deep_learning" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="v2x" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInRight">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-car m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>V2X</h4>
+                                            <p>V2X stands for Vehicle-to-Everything which relies on either DSRC or Cellular network underneath and provides a way for the vehicle to communicate everything around it e.g vehicle, infrastructure, pedestrians.</p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="v2x" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="sensor_fusion" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInLeft">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-cab m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>SENSOR FUSION</h4>
+                                            <p>Sensor Fusion intelligently combines data from multiple sensors and corrects for the deficiencies of the individual sensors to calculate accurate position and orientation information.<br></p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="sensor_fusion" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="localization" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInUp">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-location-arrow m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>LOCALIZATION</h4>
+                                            <p> Localization is an essential part of any autonomous vehicle and it is imperative for them to localize themselves in the real world, globally and locally.<br><br></p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="localization" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="path_planning" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInRight">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-road m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>PATH PLANNING</h4>
+                                            <p>Path Planning or Motion Planning is a process that lets the autonomous vehicles or robots find either the shortest or the most optimal path between two points.<br></p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="path_planning" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="robotics" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInLeft">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-wrench m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>ROBOTICS</h4>
+                                            <p>Robotics is an interdisciplinary branch engineering and science that includes mechanical engineering, electrical engineering, computer science, etc. We're focusing on building groud rover robots using available materials here.</p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="robotics" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="slam" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInUp">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-map-o m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>SLAM</h4>
+                                            <p>Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.</p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="slam" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="controls" class="col-md-4">
+                                    <div class="jumbotron single_service wow fadeInRight">
+                                        <div class="service_icon center">
+                                            <i class="fa fa-retweet m-b-3"></i>
+                                        </div>
+                                        <div class="s_service_text text-sm-center  text-xs-center">
+                                            <h4>CONTROLS</h4>
+                                            <p>Control theory deals with the control of continuously operating dynamical systems in engineered processes and machines. Different control theories designed for ground rover robots will be addressed here.</p>
+                                        </div>
+
+                                        <div class="service_btn center">
+                                            <a href="controls" class="btn btn-danger waves-effect waves-red">See  More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr style="height:7px" width="100%" align="center" color="green"></hr>
+        </section> <!-- End of service section -->
+
+
+        <section id="collaborators" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="main_client_area">
+                            <div class="head_title center m-y-3 wow fadeInUp">
+                                <h2>COLLABORATORS</h2>
+                            </div>
+
+                            <div class="main_client_content m-b-3">
+                                <div id="shubham" class="single_client">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="single_c_img center single_team_overlay">
+                                                <img class="img-circle"  src="img/shubham.jpg" alt="" style="width:60%"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="single_c_text text-xs-left text-xs-left">
+                                                <h3>Shubham Shrivastava</h3>
+                                                <span class="text-uppercase m-b-1" style="font-size:1rem">FOUNDER / OWNER</span>
+                                                <div class="team_socail">
+                                                    <a href="http://www.linkedin.com/in/shubshrivastava/"><i class="fa fa-linkedin"></i></a>
+                                                    <a href="mailto:shubham@towardsautonomy.com"><i class="fa fa-envelope"></i></a>
+                                                    <a href="tel:682-583-1244"><i class="fa fa-phone"></i></a>
+                                                </div>
+                                                <p></p>
+                                                <p>“An autonomous-driving technology enthusiast who envisions to invent technologies and bringing them to life."</p>
+                                                <div class="service_btn left">
+                                                    <a href="pages/shubham_shrivastava.html" class="btn btn-danger waves-effect waves-red">See  Portfolio</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr></hr>
+                                <div id="xianglonglu" class="single_client">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="single_c_img center single_team_overlay">
+                                                <img class="img-circle"  src="img/xianglonglu.jpg" alt="" style="width:60%"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="single_c_text text-md-left text-xs-left">
+                                                <h3>Xianglong Lu</h3>
+                                                <span class="text-uppercase m-b-1" style="font-size:1rem">COLLABORATOR</span>
+                                                <div class="team_socail">
+                                                    <a href="https://www.linkedin.com/in/xianglonglu/"><i class="fa fa-linkedin"></i></a>
+                                                    <a href="mailto:xianglonglu@towardsautonomy.com"><i class="fa fa-envelope"></i></a>
+                                                    <a href="tel:480-371-8837"><i class="fa fa-phone"></i></a>
+                                                </div>
+                                                <p></p>
+                                                <p>“Autonomous driving application engineer focusing on computer vision, LIDAR point cloud analysis and SLAM problem"</p>
+                                                <div class="service_btn left">
+                                                    <a href="#!" class="btn btn-danger waves-effect waves-red">See  Portfolio</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End of client Section -->
+
+        <section id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="main_footer_area white-text p-b-2">
+                        <div class="col-md-6">
+                            <div class="single_f_widget m-t-2 wow fadeInUp">
+                                <a href="http://www.towardsautonomy.com"><img src="img/logo.png" alt="" /></a>
+                                <div class="single_f_widget_text">
+                                    <br><h4>Contact US</h4>
+                                    <i class="fa fa-envelope">&nbsp &nbsp</i><a href="mailto:shubham@towardsautonomy.com">shubham@towardsautonomy.com</a><br>
+                                    <i class="fa fa-phone">&nbsp &nbsp<a href="tel:682-583-1244">(682)583-1244</i></a><br><br>
+                                    <div class="socail_f_widget">
+                                        <a href="https://www.linkedin.com/company/towards-autonomy/" ><i class="fa fa-linkedin"></i></a>
+                                        <a href="mailto:shubham@towardsautonomy.com" ><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" align="right">
+                            <div class="single_f_widget p-t-2 wow fadeInUp">
+                                <h4 class="text-lowercase">Tags</h4>
+                                <div class="single_f_widget_text f_tags">
+                                    <a href="#components">autonomousdriving</a>
+                                    <a href="#components">selfdriving</a>
+                                    <a href="#computer_vision">computervision</a>
+                                    <a href="#deep_learning">deeplearning</a>
+                                    <a href="#deep_learning">machinelearning</a>
+                                    <a href="#robotics">robotics</a>
+                                    <a href="#slam">slam</a>
+                                    <a href="#sensor_fusion">sensorfusion</a>
+                                    <a href="#path_planning">pathplanning</a>
+                                    <a href="#localization">localization</a>
+                                    <a href="#v2x">v2x</a>
+                                    <a href="#v2x">connectedcar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp col-md-6"  align=right><a class="text-lowercase" style="color: white";><br><b>Number of Visitors</b><br></a><a ><img src='https://www.counter12.com/img-5bBya3a4dw352Bzw-3.gif' border='0' alt='free web counter'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=5bBya3a4dw352Bzw'></script></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_coppyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-xs-12">
+                            <div class="copyright_text m-t-2 text-xs-left">
+                                <p class="wow zoomIn" data-wow-duration="1s">
+                                    <a class="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://www.copyrighted.com/work/vVOwLvZTJZB10NsB"><img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcset="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" /></a><script src="https://static.copyrighted.com/badges/helper.js"></script>
+                                    Copyright &copy;
+                                    <a target="_black" href="http://www.towardsautonomy.com"> Towards Autonomy</a> 2018. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="socail_coppyright text-sm-right m-t-2 text-xs-center wow zoomIn">
+                                <a href="https://www.linkedin.com/company/towards-autonomy/"><i class="fa fa-linkedin"></i></a>
+                                <a href="mailto:shubham@towardsautonomy.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- /Start your project here-->
+
+
+        <!-- SCRIPTS -->
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="js/scrolling.js"></script>
+
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/tether.min.js"></script>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+
+        <!-- Wow js -->
+        <script type="text/javascript" src="js/wow.min.js"></script>
+
+        <!-- Mixitup js -->
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+        <!-- Magnific-popup js -->
+        <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+
+        <!-- accordion js -->
+        <script type="text/javascript" src="js/accordion.js"></script>
+
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/materialize.js"></script>
+
+        <script>
+            $(".button-collapse").sideNav();
+        </script>
+
+        <!-- wow js active -->
+        <script type="text/javascript">
+            new WOW().init();
+        </script>
+
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+
+</html>
