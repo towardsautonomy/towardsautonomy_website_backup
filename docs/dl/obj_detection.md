@@ -1,5 +1,5 @@
 ---
-permalink: /dl/obj-detection
+permalink: /dl/obj_detection
 ---
 
 ## Object Detection, Classification, and Localization <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
@@ -22,7 +22,8 @@ Another problem with this kind of detection is multiple overlapping bounding-box
 
 You can find my code and instructions [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/yolo_v2)
 
-Pretrained weights can be found [here](https://drive.google.com/open?id=1akSwgUkqavf7upvB9WigNLhkQIFt_3je)
+Pretrained weights can be found [here](https://drive.google.com/open?id=1akSwgUkqavf7upvB9WigNLhkQIFt_3je)  
+
 For more information, contact [Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)
 
 #### References

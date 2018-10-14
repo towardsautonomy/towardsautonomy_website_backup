@@ -2,7 +2,7 @@
 permalink: /dl/semseg
 ---
 
-## SSNet for Semantic Segmentation <img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
+## SSNet for Semantic Segmentation <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
 
 ###### Author: *[Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)*   
 

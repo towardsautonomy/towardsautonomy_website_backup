@@ -3,7 +3,7 @@ permalink: /computer_vision
 ---
 
 ---
-# Computer Vision <img style="float: right;" src="/img/logo_circle.png" height="100" width="100">   
+# Computer Vision <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">   
 
 ###### Author: *[Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)*   
 
