@@ -1,5 +1,5 @@
 ---
-permalink: /dl/obj_detection
+permalink: /dl/obj-detection
 ---
 
 ## Object Detection, Classification, and Localization <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
@@ -27,5 +27,5 @@ For more information, contact [Shubham Shrivastava](http://www.towardsautonomy.c
 
 #### References
 
-[1] https://arxiv.org/abs/1506.02640
+[1] https://arxiv.org/abs/1506.02640  
 [2] https://web.stanford.edu/class/cs231a/prev_projects_2016/object-detection-autonomous.pdf
