@@ -20,7 +20,7 @@ I used YOLOv2 for object detection and localization. Each image is first resized
 
 Another problem with this kind of detection is multiple overlapping bounding-boxes. This is due to the fact that multiple grid cells might think that it contains the center of object. But this could be solved by using Intersection over Union (IoU) and applying Non-Max Suppression. To eliminate overlapping bounding-boxes we first find the highest confidence bounding-box and then compute intersecting over union for all other bounding-boxes. High IoU means there is a high overlap and so we can those bounding-boxes. Then we start with next highest confidence bounding-box and repeat the process.
 
-You can find my code and instructions [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/yolo_v2)
+You can find my code and instructions [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/object_detection_yolov2)
 
 Pretrained weights can be found [here](https://drive.google.com/open?id=1akSwgUkqavf7upvB9WigNLhkQIFt_3je)  
 

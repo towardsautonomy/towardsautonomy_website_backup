@@ -26,6 +26,6 @@ This network was trained on just 200 labelled training images obtained from [KIT
 |![](/docs/dl/img/semseg/test2.png) | ![](/docs/dl/img/semseg/pred2.png)|
 |![](/docs/dl/img/semseg/test3.png) | ![](/docs/dl/img/semseg/pred3.png)|
 
-Implementation of SSNet and other helper python scripts can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/ssnet). Pretrained weights can be downloaded [here](https://drive.google.com/open?id=1KG_-paGZmyxnSfPZGEv7uq_vTduXrLr3).
+Implementation of SSNet and other helper python scripts can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/semantic_segmentation_ssnet). Pretrained weights can be downloaded [here](https://drive.google.com/open?id=1KG_-paGZmyxnSfPZGEv7uq_vTduXrLr3).
 
 For more information, contact [Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)
