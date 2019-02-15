@@ -23,17 +23,29 @@ When a human who is driving a car sees someone suddenly move into the path of th
 
 Computer Vision can help Autonomous Cars perceive its surroundings and localize itself. It can do so by detecting the lanes, vehicles, pedestrians, traffic signs, and traffic lights on the road. Some of these are explained here and their implementation with results are given in their respective sections. Contact [Shubham Shrivastava](http://www.towardsautonomy.com/#shubham) for any questions or concerns.
 
+---
+
 #### [Lane Detection and Tracking using Birds-Eye view](/cv/lane_detection)  
 ![](docs/cv/img/lane_detection/straight_lines1.jpg)
+
+---
 
 #### [Object Detection, Classification, and Localization](/dl/obj_detection)
 ![](docs/dl/img/yolo_background.png)
 
+---
+
 #### [Vehicle Detection using SVM classifier](/cv/vehicle_detection)  
 ![](docs/cv/img/lane_veh.png)
+
+---
 
 #### [Traffic Sign detection using CNN](/cv/traffic_sign_detection)
 ![](docs/cv/img/traffic_sign_detection/test_detection.png)
 
+---
+
 #### [Semantic Segmentation](/dl/semseg)
 ![](docs/dl/img/semseg_cover.png)
+
+---
