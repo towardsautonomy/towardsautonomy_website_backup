@@ -83,7 +83,7 @@ turtlebot_custom_msg/wall_obj[] walls
 #### Possible Improvements
 
  * Build a map using [SLAM](http://emanual.robotis.com/docs/en/platform/turtlebot3/slam/)
- * Use any simple path planning algorithm like **Dynamic Programming**, **A* ** or **Hybrid A* ** to compute the path to a set destination.
+ * Use any simple path planning algorithm like **Dynamic Programming**, **A\* ** or **Hybrid A\* ** to compute the path to a set destination.
  * Generate a trajectory to follow in order to reach to the goal.
  * Implement a **waypoint follower** to output lateral and longitudinal steering values to follow the said trajectory.
 
