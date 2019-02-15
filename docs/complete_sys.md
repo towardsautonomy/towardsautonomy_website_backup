@@ -32,7 +32,7 @@ Here is the brief description of each major node doing the heavy lifting towards
 
 **Waypoint Updater Node (Part 1)**: This node subscribes to ```/base_waypoints``` and ```/current_pose``` and publishes to ```/final_waypoints```.  
 **DBW Node**: Once your waypoint updater is publishing ```/final_waypoints```, the ```/waypoint_follower``` node will start publishing messages to the ```/twist_cmd``` topic.  
-**Traffic Light Detection***: This is split into 2 parts:  
+**Traffic Light Detection**: This is split into 2 parts:  
  * *Detection*: Detect the traffic light and its color from the ```/image_color```.
  * *Waypoint publishing*: Once the traffic lights are correctly identified the traffic light and determined its position, it can be converted to a waypoint index and published.     
 

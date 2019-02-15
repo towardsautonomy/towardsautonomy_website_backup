@@ -49,7 +49,7 @@ turtlebot_custom_msg/wall_obj[] walls
   <img src="screenshots/robot_gazebo.png" width="500" /></br>
   </br><b>Top View 50x50 Grid representation of the environment </b></br>
   <img src="screenshots/robot_top_view_grid.png" width="500" /></br>
-  </br><b>Top View 50x50 Grid representation of the environment viewed as an image in ```rqt_image_view```; topic: ```/turtlebot_env/grid``` </b></br>
+  </br><b>Top View 50x50 Grid representation of the environment viewed as an image in rqt_image_view; topic: /turtlebot_env/grid </b></br>
   <img src="screenshots/grid2d_image.png" width="500" /></br>
 
   </br><b>Walls information being published on the topic /turtlebot_env </b></br>
