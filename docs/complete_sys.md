@@ -20,7 +20,7 @@ This is the simplest possible demonstration of an autonomous navigation system w
 
 TurtleBot3 Burger has found itself in a hallway. We know the walls do not go on forever, but we don’t know how long they extend. Each time we run the simulation, the walls might extend a different amount. The task is to get the burger to move until the end of the hallway, turn around and return to the original position.
 
-The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
+##### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
 
 ---
 
@@ -42,6 +42,6 @@ Here is the brief description of each major node doing the heavy lifting towards
 
 **Waypoint Updater Node (Part 2)**: It uses ```/traffic_waypoint``` to change the waypoint target velocities before publishing to ```/final_waypoints```. The car, following this waypoint now stops at red traffic lights and move when they are green.
 
-The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/sandbox/tree/master/CarND-Capstone)
+##### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/sandbox/tree/master/CarND-Capstone)
 
 ---

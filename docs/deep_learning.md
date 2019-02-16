@@ -33,10 +33,22 @@ A good read: [Deep Learning, By Ian Goodfellow, Yoshua Bengio and Aaron Courvill
 
 Some of the applications of deep learning in self-driving are presented here in details along with code for reference. Please contact [Shubham Shrivastava](http://www.towardsautonomy.com/#shubham) for any questions or concerns.
 
-1. [Object Detection, Classification, and Localization](/dl/obj_detection)
-1. [SSNet for Semantic Segmentation](/dl/semseg)
-1. [Traffic Sign detection using CNN](/cv/traffic_sign_detection)
-1. [Behavioral Cloning](/docs/dl/behavioral_cloning)
+---
+
+#### [Object Detection, Classification, and Localization](/dl/obj_detection)
+![](docs/dl/img/yolo_background.png)
+
+---
+
+#### [SSNet for Semantic Segmentation](/dl/semseg)
+![](docs/dl/img/semseg/pred2.png)
+
+---
+
+#### [Traffic Sign detection using CNN](/cv/traffic_sign_detection)
+![](docs/cv/img/traffic_sign_detection/test_detection.png)
+
+---
 
 #### References
 
