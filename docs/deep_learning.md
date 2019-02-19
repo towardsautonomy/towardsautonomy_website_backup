@@ -41,7 +41,7 @@ Some of the applications of deep learning in self-driving are presented here in 
 ---
 
 #### [SSNet for Semantic Segmentation](/dl/semseg)
-![](docs/dl/img/semseg/pred2.png)
+![](img/semseg.gif)
 
 ---
 
