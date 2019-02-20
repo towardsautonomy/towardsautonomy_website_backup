@@ -30,7 +30,7 @@ TurtleBot3 Burger has found itself in a hallway. We know the walls do not go on 
 
 This project demonstrates core functionality of the autonomous vehicle system, including traffic light detection, control, and waypoint following.
 
-![](/docs/complete_sys/self_driving_car_simulator.png)
+![](/docs/complete_sys/img/self_driving_car_simulator.png)
 
 The following is a system architecture diagram showing the ROS nodes and topics used in the project.
 
