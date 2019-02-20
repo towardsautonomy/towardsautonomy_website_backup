@@ -4,7 +4,7 @@ This project demonstrates core functionality of the autonomous vehicle system, i
 
 ##### [YouTube Link to the demo video](https://youtu.be/aHQQqLsYMUg "Udacity Self-Driving Car")
 
-![](./imgs/udacity_simulator_self_driving.gif)
+![](../../img/udacity_simulator_self_driving.gif)
 
 The following is a system architecture diagram showing the ROS nodes and topics used in the project.
 

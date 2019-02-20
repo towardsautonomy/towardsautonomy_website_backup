@@ -30,7 +30,7 @@ TurtleBot3 Burger has found itself in a hallway. We know the walls do not go on 
 
 This project demonstrates core functionality of the autonomous vehicle system, including traffic light detection, control, and waypoint following.
 
-![](/img/udacity_simulator_self_driving.gif)
+![](/docs/complete_sys/self_driving_car_simulator.png)
 
 The following is a system architecture diagram showing the ROS nodes and topics used in the project.
 
@@ -103,6 +103,6 @@ and
  * Throttle value ranges from 0 to 1.0 however the braking torque ranges from 0 to 700 Nm. To get these two range of values, following approach was taken: (1) The range for PID controller is defined to be -1.0 to 1.0. (2) If the controller returns a value >= 0, the same value is assigned to throttle value. (3) If the controller returns a value < 0, that means that braking is required. Braking torque is then computed as a scaled value that is negatively proportional to the value returned by controller. i.e. ```brake = -1.0*controller_output*BRAKE_SLOWDOWN_TORQUE```.   
  * If the desired linear velocity is very small (< 0.1), that means the vehicle needs to come to a complete stop. Since the vehicle is an automatic-transmission, maximum braking torque is applied to make sure that the vehicle is not moving.   
 
-##### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/sandbox/tree/master/CarND-Capstone)
+##### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/self_driving_car_udacity)
 
 ---
