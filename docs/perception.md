@@ -8,9 +8,9 @@ permalink: /perception
 ###### Author: *[Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)*   
 ---
 
-**Perception** is one of the most significant systems of autonomous vehicles/robots. It allows the vehicle to perceive the 360-degrees environment around it. Perception system helps the vehicle understands its surroundings like drivable area, lanes, vehicles, pedestrians, road boundaries, traffic signs, and traffic lights. This system uses multiple sensors like LiDAR, RADAR, and Camera to perceive the world and detect objects.
+**Perception** is one of the most significant systems of autonomous vehicles/robots. It allows the vehicle to perceive the 360-degrees environment around it. Perception system helps the vehicle understands its surroundings like drivable area, lanes, vehicles, pedestrians, road boundaries, traffic signs, and traffic lights. This system uses multiple sensors like LiDAR, RADAR, and Camera to perceive the world and detect objects. This page explores various subsystems of perception and shows some methods of ground-plane segmentation, object detection, lane detection, and object classification.
 
-#### [LiDAR based Ground-Plane Segmentation and Object Detection](/perception/lidar_object_detection_clustering)  
+### [LiDAR based Ground-Plane Segmentation and Object Detection](/perception/lidar_object_detection_clustering)  
 ![](docs/perception/img/lidar_objects_front_view.gif)
 
 ---

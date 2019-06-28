@@ -1,6 +1,6 @@
 # LiDAR based Object Detection
 
-![](/projects/lidar_object_detection_clustering/media/lidar_objects_front_side.gif)
+![](media/lidar_objects_front_side.gif)
 
 ## Introduction
 
@@ -16,7 +16,7 @@ Once we have segmented the ground-plane, we can look into all other points to fi
 
 **Clustering** requires looking for all the points closer to a *seed* point. The computation can very quickly increase exponentially in the brute-force method of computing distance between all the possible points. If the points are stored in a k-d tree structure, then the search problem becomes much easier and computationally cheap. **Euclidian Clustering** method is utilized in this project to find clusters within the point-cloud. This clustering method uses k-d tree search to find points that are close together.
 
-![](/projects/lidar_object_detection_clustering/media/kd_tree.png)
+![](media/kd_tree.png)
 *k-d tree visualization for in 3D space*
 
 k-d tree insert and search methods, euclidean clustering, line and plane fitting, and RANSAC are implemented in helper/helper.cpp . **PCL** (Point-Cloud Library) is used for point-cloud definition, and visualization. Installation instruction for PCL is provided below.
