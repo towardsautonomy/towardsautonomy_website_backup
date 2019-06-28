@@ -9,7 +9,7 @@ permalink: /deep_learning
 ---
 
 <p align="center">
-  <img src="/docs/dl/img/semseg_cover.png">
+  <img src="/docs/dl/img/ml_brain.png">
 </p>
 
 Deep learning is a subset of AI and machine learning that uses multi-layered artificial neural networks to deliver state-of-the-art accuracy in tasks such as object detection, speech recognition, language translation and others [[1]](#references).
@@ -36,17 +36,17 @@ Some of the applications of deep learning in self-driving are presented here in 
 ---
 
 #### [Object Detection, Classification, and Localization](/dl/obj_detection)
-![](docs/dl/img/yolo_background.png)
+![](docs/dl/img/yolov2_objects.gif)
 
 ---
 
 #### [SSNet for Semantic Segmentation](/dl/semseg)
-![](img/semseg.gif)
+![](docs/dl/img/semseg.gif)
 
 ---
 
-#### [Traffic Sign detection using CNN](/cv/traffic_sign_detection)
-![](docs/cv/img/traffic_sign_detection/test_detection.png)
+#### [Traffic Sign Classification using CNN](/perception/traffic_sign_classification)
+![](docs/perception/img/traffic_sign_classification/test_detection.png)
 
 ---
 

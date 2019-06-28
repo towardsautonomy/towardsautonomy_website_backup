@@ -49,12 +49,12 @@ Computer Vision can help Autonomous Cars perceive its surroundings and localize 
 
 ---
 
-#### [Traffic Sign Classification using CNN](/perception/traffic_sign_classification)
-![](docs/perception/img/traffic_sign_classification/test_detection.png)
+#### [Semantic Segmentation](/dl/semseg)
+![](docs/perception/img/semseg.gif)
 
 ---
 
-#### [Semantic Segmentation](/dl/semseg)
-![](docs/dl/img/semseg_cover.png)
+#### [Traffic Sign Classification using CNN](/perception/traffic_sign_classification)
+![](docs/perception/img/traffic_sign_classification/test_detection.png)
 
 ---
