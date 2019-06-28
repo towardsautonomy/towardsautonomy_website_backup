@@ -14,7 +14,7 @@ Building a complete autonomous car or a robotic system requires implementing fol
 
 ### TurtleBot3 Burger Autonomous Navigation in a Hallway
 
-[![TurtleBot Autonomous Navigation](/docs/autonomous_systems/img/turtlebot_gazebo.png)](https://youtu.be/Pg-DAB2tA5c "TurtleBot Autonomous Navigation")
+[![TurtleBot Autonomous Navigation](/docs/autonomous_systems/img/turtlebot.gif)](https://youtu.be/Pg-DAB2tA5c "TurtleBot Autonomous Navigation")
 
 This is the simplest possible demonstration of an autonomous navigation system which implements Perception, Controls, and Path Planning. It demonstrates how these subsystems interacts with each other as a whole in order to sense the surroundings, plan its path, and get to its destination. The complete implementation is within the ROS framework.
 
@@ -30,7 +30,7 @@ TurtleBot3 Burger has found itself in a hallway. We know the walls do not go on 
 
 This project demonstrates core functionality of the autonomous vehicle system, including traffic light detection, control, and waypoint following.
 
-![](/docs/autonomous_systems/img/self_driving_car_simulator.png)
+![](/docs/autonomous_systems/img/udacity_simulator_self_driving.gif)
 
 The following is a system architecture diagram showing the ROS nodes and topics used in the project.
 

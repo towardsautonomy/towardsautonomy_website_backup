@@ -15,6 +15,11 @@ permalink: /perception
 
 ---
 
+#### [LiDAR Camera Fusion](/perception/lidar_camera_fusion)  
+![](docs/perception/img/lidar_camera_fusion.gif)
+
+---
+
 ## Computer Vision
 
 Computer vision is a field of computer science that works on enabling computers to see, identify and process images in the same way that human vision does, and then provide appropriate output. It is like imparting human intelligence and instincts to a computer. In reality though, it is a difficult task to enable computers to recognize images of different objects.
@@ -35,7 +40,7 @@ Computer Vision can help Autonomous Cars perceive its surroundings and localize 
 ---
 
 #### [Object Detection, Classification, and Localization](/dl/obj_detection)
-![](docs/dl/img/yolo_background.png)
+![](docs/perception/img/yolov2_objects.gif)
 
 ---
 
