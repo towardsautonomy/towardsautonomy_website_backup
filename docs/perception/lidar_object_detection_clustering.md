@@ -2,13 +2,13 @@
 permalink: /perception/lidar_object_detection_clustering
 ---
 
-## LiDAR based Ground-Plane Segmentation and Object Detection <img style="float: right;" src="//docs/perception/img/logo_circle.png" height="100" width="100">
+## LiDAR based Ground-Plane Segmentation and Object Detection <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
 
 ###### Author: *[Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)*   
 
 ---
 
-![](media/lidar_objects_front_side.gif)
+![](/docs/perception/img/lidar_objects_front_side.gif)
 
 ## Introduction
 
@@ -20,30 +20,13 @@ permalink: /perception/lidar_object_detection_clustering
 
 **RANSAC** first picks a few samples randomly within the point-cloud and fits a plane through that. Then it counts the number of inliers by computing closest distance between the plane and all other points. If this distance is within a certain threshold, then this point is added to the list of inliers. This process is repeated multiple number of times to find the fit that estimates the ground-plane. A plane can be fit through points using either SVD or Least-Squares method.
 
-Once we have segmented the ground-plane, we can look into all other points to find objects (if any) within the point-cloud. To find an object, we can take advantage of the fact that the points corresponding to the object are distributed very close to each other. If we can find clusters of points within the point-cloud, then the clusters will correspond to objects like vehicles, pedestrians, road boundary walls, buildings, and trees. Further, we can employ point-cloud filtering using multiple constraints such as *bounding-box* length, width, and height to differentiate between different classes. A 3D **bounding-box** defines the boundary of objects such that *x_min, x_max, y_min, y_max, z_min, and z_max*.
+Once we have segmented the ground-plane, we can look into all other points to find objects (if any) within the point-cloud. To find an object, we can take advantage of the fact that the points corresponding to the object are distributed very close to each other. If we can find clusters of points within the point-cloud, then the clusters will correspond to objects like vehicles, pedestrians, road boundary walls, buildings, and trees. Further, we can employ point-cloud filtering using multiple constraints such as *bounding-box* length, width, and height to differentiate between different classes. A 3D **bounding-box** defines the boundary of objects such as *x_min, x_max, y_min, y_max, z_min, and z_max*.
 
 **Clustering** requires looking for all the points closer to a *seed* point. The computation can very quickly increase exponentially in the brute-force method of computing distance between all the possible points. If the points are stored in a k-d tree structure, then the search problem becomes much easier and computationally cheap. **Euclidian Clustering** method is utilized in this project to find clusters within the point-cloud. This clustering method uses k-d tree search to find points that are close together.
 
-![](/docs/perception/img/kd_tree.png)
+![](/docs/perception/img/kd_tree.png)  
 *k-d tree visualization for in 3D space*
 
 k-d tree insert and search methods, euclidean clustering, line and plane fitting, and RANSAC are implemented in helper/helper.cpp . **PCL** (Point-Cloud Library) is used for point-cloud definition, and visualization.
 
-### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/lidar_object_detection_clustering)
-
-Installation instruction for PCL is provided below.
-
-**PCL Installation Instructions**
-
- - Ubuntu
-
-https://askubuntu.com/questions/916260/how-to-install-point-cloud-library-v1-8-pcl-1-8-0-on-ubuntu-16-04-2-lts-for
-
- - Windows
-
-http://www.pointclouds.org/downloads/windows.html
-
- - MAC
-
-http://www.pointclouds.org/downloads/macosx.html
-http://www.pointclouds.org/documentation/tutorials/installing_homebrew.php
+## The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/lidar_object_detection_clustering)
