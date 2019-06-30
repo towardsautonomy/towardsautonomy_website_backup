@@ -12,19 +12,21 @@ Building a complete autonomous car or a robotic system requires implementing fol
 
 ---
 
-### TurtleBot3 Burger Autonomous Navigation in a Hallway
+### [TurtleBot3 Burger Autonomous Navigation in a Hallway](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
 
-[![TurtleBot Autonomous Navigation](/docs/autonomous_systems/img/turtlebot.gif)](https://youtu.be/Pg-DAB2tA5c "TurtleBot Autonomous Navigation")
+![TurtleBot Autonomous Navigation](/docs/autonomous_systems/img/turtlebot.gif)
 
 This is the simplest possible demonstration of an autonomous navigation system which implements Perception, Controls, and Path Planning. It demonstrates how these subsystems interacts with each other as a whole in order to sense the surroundings, plan its path, and get to its destination. The complete implementation is within the ROS framework.
 
 TurtleBot3 Burger has found itself in a hallway. We know the walls do not go on forever, but we don’t know how long they extend. Each time we run the simulation, the walls might extend a different amount. The task is to get the burger to move until the end of the hallway, turn around and return to the original position.
 
-##### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
+#### [YouTube Link to the demo video](https://youtu.be/Pg-DAB2tA5c "TurtleBot Autonomous Navigation")
+
+#### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
 
 ---
 
-### Self-Driving Car in Udacity Simulator
+### [Self-Driving Car in Udacity Simulator](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/self_driving_car_udacity)
 
 ##### [YouTube Link to the demo video](https://youtu.be/aHQQqLsYMUg "Udacity Self-Driving Car")
 
@@ -48,4 +50,4 @@ Here is the brief description of each major node doing the heavy lifting towards
 **Waypoint Updater Node (Part 2)**: It uses ```/traffic_waypoint``` to change the waypoint target velocities before publishing to ```/final_waypoints```. The car, following this waypoint now stops at red traffic lights and move when they are green.   
 **Twist Controller**: It executes the twist commands published by ```/waypoint_follower``` node over ```/twist_cmd``` topic.
 
-##### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/self_driving_car_udacity)
+#### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/self_driving_car_udacity)
