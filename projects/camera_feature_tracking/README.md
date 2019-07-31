@@ -34,6 +34,8 @@ Based on the chart, here are the top 3 choices of keypoint detector and descript
 
 ![](./comparision/top3_algorithm_conclusion.png) 
 
+The Keypoint Feature Detection and Tracking implemented on KITTI dataset using OpenCV library.
+
 ## Dependencies for Running Locally
 * cmake >= 2.8
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
