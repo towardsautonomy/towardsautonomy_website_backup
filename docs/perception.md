@@ -44,6 +44,11 @@ Computer Vision can help Autonomous Cars perceive its surroundings and localize 
 
 ---
 
+#### [Camera Image Feature Detection and Tracking](/perception/feature_tracking)
+![](docs/perception/img/matching_points.png)
+
+---
+
 #### [Vehicle Detection using SVM classifier](/perception/vehicle_detection)  
 ![](img/lane_veh.gif)
 
