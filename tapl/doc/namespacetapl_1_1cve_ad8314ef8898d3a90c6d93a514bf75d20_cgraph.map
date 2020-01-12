@@ -1,0 +1,15 @@
+<map id="tapl::cve::computeRelativePose" name="tapl::cve::computeRelativePose">
+<area shape="rect" id="node2" href="$namespacetapl_1_1cve.html#a34cb000d47a121549e81900da9913299" title="This function detects keypoints in two image frames and perform keypoints matching. " alt="" coords="281,181,484,207"/>
+<area shape="rect" id="node10" href="$structtapl_1_1CameraFrame.html#aafb04677ac368c41616786d74cada301" title="tapl::CameraFrame::\lgetKeypoints" alt="" coords="311,232,454,273"/>
+<area shape="rect" id="node11" href="$structtapl_1_1DataFrame.html#ad6784247bd772557ed661a27c011e978" title="tapl::DataFrame::getKpts\lMatches" alt="" coords="298,297,467,339"/>
+<area shape="rect" id="node12" href="$cvEngine_8cpp.html#a7f717198f1e528db1077f706c9f9c515" title="rodrigues2euler" alt="" coords="327,363,438,390"/>
+<area shape="rect" id="node13" href="$structtapl_1_1DataFrame.html#a58252333218ee415dc043c54e01e7365" title="tapl::DataFrame::pushPose" alt="" coords="291,414,474,441"/>
+<area shape="rect" id="node14" href="$structtapl_1_1DataFrame.html#a6a48c0c169570f49e3a3f87e2f947445" title="tapl::DataFrame::pushTriangulatedPts" alt="" coords="261,465,504,491"/>
+<area shape="rect" id="node3" href="$structtapl_1_1CameraFrame.html#a173bf0e309ba2a499425bb4d881c3a8f" title="tapl::CameraFrame::\lgetImage" alt="" coords="574,5,717,47"/>
+<area shape="rect" id="node4" href="$namespacetapl_1_1cve.html#ad74b56dc35c6a902870725543d5df419" title="This function detects keypoints in an image. " alt="" coords="558,71,733,98"/>
+<area shape="rect" id="node5" href="$namespacetapl_1_1cve.html#a02712316099758c2b4d0bb0e4e5dc219" title="This function extracts keypoints descriptors in an image. " alt="" coords="552,122,739,149"/>
+<area shape="rect" id="node6" href="$structtapl_1_1CameraFrame.html#a8fb1c882c8586540cad9ed46e8e2c575" title="tapl::CameraFrame::\lpushDescriptors" alt="" coords="574,173,717,215"/>
+<area shape="rect" id="node7" href="$structtapl_1_1CameraFrame.html#a615e5c9e86234c3a1ab0bff9385b2820" title="tapl::CameraFrame::\lpushKeypoints" alt="" coords="574,239,717,280"/>
+<area shape="rect" id="node8" href="$namespacetapl_1_1cve.html#ae6ed3bade2dfad9272fbe2c661d0f02e" title="This function performs keypoint descriptor matching. " alt="" coords="554,305,737,331"/>
+<area shape="rect" id="node9" href="$structtapl_1_1DataFrame.html#a1f6a23df2e1cc6341242fbf8a281205f" title="tapl::DataFrame::pushKpts\lMatches" alt="" coords="556,356,735,397"/>
+</map>
