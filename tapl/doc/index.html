@@ -108,33 +108,61 @@ $(document).ready(function(){initNavTree('index.html','');});
 <h2><a href="https://github.com/towardsautonomy/TAPL"><b>Find on GitHub</b></a></h2>
 <h2>Examples of Perception Task</h2>
 <h4>Visual Odometry for a sequence of Monocular camera images</h4>
+<p>This example is provided at <code>examples/src/monoVO.cpp</code>. It uses a sequence of monocular images to perform visual odometry and build sparse point-cloud. This functionality is provided as an API and can be accessed using the function: <code><a class="el" href="namespacetapl_1_1cve.html#ad8314ef8898d3a90c6d93a514bf75d20" title="This function is used to compute the relative camera pose. Pose is computed for second image containe...">tapl::cve::computeRelativePose()</a></code>.</p>
+<p><b>Pipeline</b></p>
 <ul>
-<li>All the API has been provided in <em>src/cvEngine.cpp</em>. See usage in <em>examples/monoVO.cpp</em></li>
+<li>Read images and push into a ring buffer.</li>
+<li>If more than one image is available in the buffer then:<ul>
+<li>Perform keypoint detection and matching.</li>
+<li>Compute essential matrix.</li>
+<li>Compute relative pose (R, t)</li>
+<li>Triangulate good keypoints for which a match is found.</li>
+</ul>
+</li>
+<li>Compute global pose from this relative pose.</li>
 </ul>
 <div class="image">
 <img src="mono_vo.gif" alt="mono_vo.gif"/>
 </div>
-<h4>Visual Odometry for a sequence of Stereo camera images</h4>
+<h4>LiDAR Object Detection</h4>
+<p>This example is provided at <code>examples/src/lidarObjectDetection.cpp</code>. It reads in PCD point-cloud files, performs downsampling, ground-plane segmentation, and clustering, and then some post-processing filtering to get 3D Bounding-Box of objects.</p>
+<p><b>Pipeline</b></p>
 <ul>
-<li>Under development</li>
+<li>Load point-cloud data.</li>
+<li>Downsample point-cloud (voxelization).</li>
+<li>Crop the point-cloud based on a region of interest.</li>
+<li>Segment out ground-plane using RANSAC.<ul>
+<li>For <em>n</em> iterations:<ul>
+<li>Choose 3 random points.</li>
+<li>Fit a plane using least-squares.</li>
+<li>Count number of inliers within a certain distance threshold between each point and plane.</li>
 </ul>
-<h4>Euclidean Clustering within a point-cloud using kd-tree for storing points.</h4>
-<ul>
-<li>C++ implementation of RANSAC for ground segmentation, kd-tree and euclidean clustering in <em>src/ptEngine.cpp</em></li>
+</li>
+<li>Choose the plane that resulted in maximum number of inliers.</li>
+<li>Implemented as part of <code>class <a class="el" href="classtapl_1_1pte_1_1Plane.html">tapl::pte::Plane()</a></code>.</li>
+</ul>
+</li>
+<li>Perform Euclidian Clustering within the segmented point-cloud.<ul>
+<li>Store the point-cloud as a <b>KdTree</b>. Implemented as <code>struct <a class="el" href="structtapl_1_1pte_1_1KdTree.html">tapl::pte::KdTree</a></code>.</li>
+<li>Perform euclidean clustering on the KdTree. Implemented as <code>class <a class="el" href="classtapl_1_1pte_1_1EuclideanCluster.html">tapl::pte::EuclideanCluster()</a></code>.</li>
+</ul>
+</li>
+<li>Filter and Extract the bounding-boxes.</li>
 </ul>
 <div class="image">
-<img src="lidar_objects_front_side.gif" alt="lidar_objects_front_side.gif"/>
+<img src="lidar_object_detection.gif" alt="lidar_object_detection.gif"/>
+</div>
+<div class="image">
+<img src="clustering.gif" alt="clustering.gif"/>
 </div>
 <h4>Image Feature Detection and Tracking</h4>
-<ul>
-<li>C++ implementation in <em>src/cvEngine.cpp</em></li>
-</ul>
+<p>This example is provided at <code>examples/src/kptsDetectionAndTracking.cpp</code> and this functionality is implemented as <code><a class="el" href="namespacetapl_1_1cve.html#a34cb000d47a121549e81900da9913299" title="This function detects keypoints in two image frames and perform keypoints matching. ">tapl::cve::detectAndMatchKpts()</a></code>.</p>
 <div class="image">
 <img src="matching_points.png" alt="matching_points.png"/>
 </div>
 <h4>RANSAC for line and plane fitting</h4>
 <ul>
-<li>C++ implementation of RANSAC for line and plane fitting using both SVD and least-square methods are provided in <em>cve/ptEngine.cpp</em> which can be simply used as an API.</li>
+<li>C++ implementation of RANSAC for line and plane fitting using both SVD and least-square methods are provided as part of <code>class <a class="el" href="classtapl_1_1pte_1_1Line.html">tapl::pte::Line()</a></code> and <code>class <a class="el" href="classtapl_1_1pte_1_1Plane.html">tapl::pte::Plane()</a></code>.</li>
 </ul>
 <table class="doxtable">
 <tr>
@@ -153,6 +181,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>CMake &gt;= 3.5</li>
 <li>OpenCV &gt;= 4.1</li>
 <li>PCL &gt;= 1.2</li>
+<li>Eigen &gt;= 3.2</li>
 </ul>
 <h2>Installation Instructions</h2>
 <ul>

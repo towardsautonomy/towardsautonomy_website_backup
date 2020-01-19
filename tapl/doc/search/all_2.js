@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['euclideancluster',['EuclideanCluster',['../classtapl_1_1pte_1_1EuclideanCluster.html',1,'tapl::pte']]],
-  ['euclideancluster',['EuclideanCluster',['../classtapl_1_1pte_1_1EuclideanCluster.html#ae0cc79c58e5c58512b953c9252acfcb0',1,'tapl::pte::EuclideanCluster']]],
-  ['euler',['euler',['../structtapl_1_1Pose6dof.html#afa5dd6803d0f682139676e27ff20b9d2',1,'tapl::Pose6dof']]],
-  ['extractdescriptors',['extractDescriptors',['../namespacetapl_1_1cve.html#a02712316099758c2b4d0bb0e4e5dc219',1,'tapl::cve']]]
+  ['dataframe',['DataFrame',['../structtapl_1_1DataFrame.html',1,'tapl']]],
+  ['dataframe',['DataFrame',['../structtapl_1_1DataFrame.html#a046dcfff07492b3753902bc3bd924e1d',1,'tapl::DataFrame']]],
+  ['degreestoradians',['degreesToRadians',['../ptEngine_8hpp.html#af587759c004d4f86b1c5821066cca76a',1,'ptEngine.hpp']]],
+  ['detectandmatchkpts',['detectAndMatchKpts',['../namespacetapl_1_1cve.html#a34cb000d47a121549e81900da9913299',1,'tapl::cve']]],
+  ['detectkeypoints',['detectKeypoints',['../namespacetapl_1_1cve.html#ad74b56dc35c6a902870725543d5df419',1,'tapl::cve']]],
+  ['dist',['dist',['../structtapl_1_1pte_1_1KdTree.html#a58fd56f5fcbc48ec95e975cc02471d1b',1,'tapl::pte::KdTree']]],
+  ['disttopoint',['distToPoint',['../classtapl_1_1pte_1_1Line.html#a97f6d7505cead12ac6f82d84ca0bf92a',1,'tapl::pte::Line::distToPoint()'],['../classtapl_1_1pte_1_1Plane.html#af3adadd3b24d6c6a5750186e1828b26f',1,'tapl::pte::Plane::distToPoint()']]],
+  ['downsamplecloud',['downsampleCloud',['../namespacetapl_1_1pte.html#a48c0b0806659501276e0b33042e2fa5b',1,'tapl::pte']]]
 ];

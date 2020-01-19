@@ -1,10 +1,14 @@
 var searchData=
 [
-  ['dataframe',['DataFrame',['../structtapl_1_1DataFrame.html',1,'tapl']]],
-  ['dataframe',['DataFrame',['../structtapl_1_1DataFrame.html#a046dcfff07492b3753902bc3bd924e1d',1,'tapl::DataFrame']]],
-  ['degreestoradians',['degreesToRadians',['../ptEngine_8hpp.html#af587759c004d4f86b1c5821066cca76a',1,'ptEngine.hpp']]],
-  ['detectandmatchkpts',['detectAndMatchKpts',['../namespacetapl_1_1cve.html#a34cb000d47a121549e81900da9913299',1,'tapl::cve']]],
-  ['detectkeypoints',['detectKeypoints',['../namespacetapl_1_1cve.html#ad74b56dc35c6a902870725543d5df419',1,'tapl::cve']]],
-  ['dist',['dist',['../structtapl_1_1pte_1_1KdTree.html#a58fd56f5fcbc48ec95e975cc02471d1b',1,'tapl::pte::KdTree']]],
-  ['disttopoint',['distToPoint',['../classtapl_1_1pte_1_1Line.html#a97f6d7505cead12ac6f82d84ca0bf92a',1,'tapl::pte::Line::distToPoint()'],['../classtapl_1_1pte_1_1Plane.html#af3adadd3b24d6c6a5750186e1828b26f',1,'tapl::pte::Plane::distToPoint()']]]
+  ['cameraangle',['CameraAngle',['../namespacetapl_1_1viz.html#a99e496921984514dbc7bcef809f50150',1,'tapl::viz']]],
+  ['cameraframe',['cameraFrame',['../structtapl_1_1DataFrame.html#a6a9523806fd3280ddd54085669572288',1,'tapl::DataFrame::cameraFrame()'],['../structtapl_1_1CameraFrame.html#a9f661d86590e6777e35170477b140c46',1,'tapl::CameraFrame::CameraFrame()']]],
+  ['cameraframe',['CameraFrame',['../structtapl_1_1CameraFrame.html',1,'tapl']]],
+  ['clearscene',['clearScene',['../classtapl_1_1viz_1_1Visualizer.html#a912479d651c5a9bcd5a24b77025f10c0',1,'tapl::viz::Visualizer']]],
+  ['clustering',['clustering',['../classtapl_1_1pte_1_1EuclideanCluster.html#a7006b8b1a10af362b0001e4f36d3b4fb',1,'tapl::pte::EuclideanCluster']]],
+  ['computeessentialmatrix',['computeEssentialMatrix',['../namespacetapl_1_1cve.html#a30da40f2aa0e434425c7b14f23b59457',1,'tapl::cve']]],
+  ['computefundamentalmatrix',['computeFundamentalMatrix',['../namespacetapl_1_1cve.html#a8e1c9ef8d5eae6975b5e7e7c360fc1e8',1,'tapl::cve']]],
+  ['computerelativepose',['computeRelativePose',['../namespacetapl_1_1cve.html#ad8314ef8898d3a90c6d93a514bf75d20',1,'tapl::cve']]],
+  ['cropcloud',['cropCloud',['../namespacetapl_1_1pte.html#adaa36d31de7cd145e875901dfa13a616',1,'tapl::pte']]],
+  ['cvengine_2ecpp',['cvEngine.cpp',['../cvEngine_8cpp.html',1,'']]],
+  ['cvengine_2ehpp',['cvEngine.hpp',['../cvEngine_8hpp.html',1,'']]]
 ];

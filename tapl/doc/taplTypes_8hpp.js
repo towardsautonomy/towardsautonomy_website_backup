@@ -1,5 +1,6 @@
 var taplTypes_8hpp =
 [
+    [ "BBox3d", "structtapl_1_1BBox3d.html", "structtapl_1_1BBox3d" ],
     [ "Pose6dof", "structtapl_1_1Pose6dof.html", "structtapl_1_1Pose6dof" ],
     [ "CameraFrame", "structtapl_1_1CameraFrame.html", "structtapl_1_1CameraFrame" ],
     [ "DataFrame", "structtapl_1_1DataFrame.html", "structtapl_1_1DataFrame" ],

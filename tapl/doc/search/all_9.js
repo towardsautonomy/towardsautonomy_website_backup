@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../structtapl_1_1pte_1_1Node.html',1,'tapl::pte']]],
-  ['node',['Node',['../structtapl_1_1pte_1_1Node.html#afec8c3ce63e2269d7602de2f22dc11c6',1,'tapl::pte::Node']]]
+  ['matchdescriptors',['matchDescriptors',['../namespacetapl_1_1cve.html#ae2699cc690841efd3b7a3179be1fb889',1,'tapl::cve']]]
 ];

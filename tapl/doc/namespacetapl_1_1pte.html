@@ -127,12 +127,322 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a874efe99ea9c6366ae0c0329554ad200"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200">world2CamRotation</a> ()</td></tr>
+<tr class="memdesc:a874efe99ea9c6366ae0c0329554ad200"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns world to camera rotation matrix  <a href="#a874efe99ea9c6366ae0c0329554ad200">More...</a><br /></td></tr>
 <tr class="separator:a874efe99ea9c6366ae0c0329554ad200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a928126360beb48c632ff331ca560a1b0"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
 <tr class="memitem:a928126360beb48c632ff331ca560a1b0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0">world2CamCoordinate</a> (PointT &amp;point)</td></tr>
+<tr class="memdesc:a928126360beb48c632ff331ca560a1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">affine transform on a point  <a href="#a928126360beb48c632ff331ca560a1b0">More...</a><br /></td></tr>
 <tr class="separator:a928126360beb48c632ff331ca560a1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c0b0806659501276e0b33042e2fa5b"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:a48c0b0806659501276e0b33042e2fa5b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a48c0b0806659501276e0b33042e2fa5b">downsampleCloud</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, float resolution)</td></tr>
+<tr class="memdesc:a48c0b0806659501276e0b33042e2fa5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Downsample point-cloud.  <a href="#a48c0b0806659501276e0b33042e2fa5b">More...</a><br /></td></tr>
+<tr class="separator:a48c0b0806659501276e0b33042e2fa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa36d31de7cd145e875901dfa13a616"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:adaa36d31de7cd145e875901dfa13a616"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#adaa36d31de7cd145e875901dfa13a616">cropCloud</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, float x_min, float x_max, float y_min, float y_max, float z_min, float z_max)</td></tr>
+<tr class="memdesc:adaa36d31de7cd145e875901dfa13a616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crop point-cloud given a region of interest.  <a href="#adaa36d31de7cd145e875901dfa13a616">More...</a><br /></td></tr>
+<tr class="separator:adaa36d31de7cd145e875901dfa13a616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fc09affe62218081e85ed5818bf2ef"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:aa4fc09affe62218081e85ed5818bf2ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetapl.html#a196ce1d5bf399fc26f03797e6a8d03ff">tapl::ResultCode</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#aa4fc09affe62218081e85ed5818bf2ef">segmentPlane</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, std::pair&lt; typename pcl::PointCloud&lt; PointT &gt;::Ptr, typename pcl::PointCloud&lt; PointT &gt;::Ptr &gt; &amp;segResult, int maxIterations, float distanceThreshold, bool usePCL=false)</td></tr>
+<tr class="memdesc:aa4fc09affe62218081e85ed5818bf2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function segments a plane within a point-cloud. Points within the plane are inliers and other points are outliers. It populates two separate point-clouds corresponding to inliers and outliers.  <a href="#aa4fc09affe62218081e85ed5818bf2ef">More...</a><br /></td></tr>
+<tr class="separator:aa4fc09affe62218081e85ed5818bf2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e06eaa64248177550033adb709fb3d"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:a69e06eaa64248177550033adb709fb3d"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; typename pcl::PointCloud&lt; PointT &gt;::Ptr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a69e06eaa64248177550033adb709fb3d">euclideanClustering</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, float clusterTolerance, int minNumPoints, int maxNumPoints, bool usePCL=false)</td></tr>
+<tr class="memdesc:a69e06eaa64248177550033adb709fb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform euclidean clustering within a point-cloud. Returns a vector of cluster clouds.  <a href="#a69e06eaa64248177550033adb709fb3d">More...</a><br /></td></tr>
+<tr class="separator:a69e06eaa64248177550033adb709fb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b4a53485d62466140d43448496536b"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:ac4b4a53485d62466140d43448496536b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structtapl_1_1BBox3d.html">tapl::BBox3d</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#ac4b4a53485d62466140d43448496536b">getBoundingBox</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloudCluster)</td></tr>
+<tr class="memdesc:ac4b4a53485d62466140d43448496536b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is used to obtain bounding-box for a cluster of points.  <a href="#ac4b4a53485d62466140d43448496536b">More...</a><br /></td></tr>
+<tr class="separator:ac4b4a53485d62466140d43448496536b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="adaa36d31de7cd145e875901dfa13a616"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void tapl::pte::cropCloud </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointT &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z_max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crop point-cloud given a region of interest. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cloud</td><td>Point-Cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_min</td><td>minimum point x-coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_max</td><td>maximum point x-coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y_min</td><td>minimum point y-coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y_max</td><td>maximum point y-coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">z_min</td><td>minimum point z-coordinate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">z_max</td><td>maximum point z-coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00253">253</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48c0b0806659501276e0b33042e2fa5b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void tapl::pte::downsampleCloud </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointT &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>resolution</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Downsample point-cloud. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cloud</td><td>Point-Cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">resolution</td><td>Target resolution for downsampling the cloud </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00232">232</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69e06eaa64248177550033adb709fb3d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;typename pcl::PointCloud&lt;PointT&gt;::Ptr&gt; tapl::pte::euclideanClustering </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointT &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>clusterTolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minNumPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxNumPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>usePCL</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform euclidean clustering within a point-cloud. Returns a vector of cluster clouds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cloud</td><td>point-cloud to segment </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clusterTolerance</td><td>distance tolerance for considering a point as part of the cluster. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minNumPoints</td><td>minimum number of points in a neighborhood to be considered as a cluster </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxNumPoints</td><td>maximum number of points in a neighborhood to be considered as a cluster </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">usePCL</td><td>Whether to use PCL of TAPL's implementation of RANSAC</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of cluster point-clouds </dd></dl>
+
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00375">375</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacetapl_1_1pte_a69e06eaa64248177550033adb709fb3d_cgraph.png" border="0" usemap="#namespacetapl_1_1pte_a69e06eaa64248177550033adb709fb3d_cgraph" alt=""/></div>
+<map name="namespacetapl_1_1pte_a69e06eaa64248177550033adb709fb3d_cgraph" id="namespacetapl_1_1pte_a69e06eaa64248177550033adb709fb3d_cgraph">
+<area shape="rect" id="node2" href="structtapl_1_1pte_1_1KdTree.html#acaf4969659031fa301d1b7e46d6b3b77" title="tapl::pte::KdTree::\linsert" alt="" coords="269,5,395,47"/>
+<area shape="rect" id="node4" href="classtapl_1_1pte_1_1EuclideanCluster.html#a7006b8b1a10af362b0001e4f36d3b4fb" title="tapl::pte::EuclideanCluster\l::clustering" alt="" coords="244,71,420,112"/>
+<area shape="rect" id="node3" href="structtapl_1_1pte_1_1KdTree.html#a388598d62bc5f21a5f5b802a8feecc74" title="tapl::pte::KdTree::\linsertHelper" alt="" coords="468,5,595,47"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4b4a53485d62466140d43448496536b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtapl_1_1BBox3d.html">tapl::BBox3d</a> tapl::pte::getBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointT &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloudCluster</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is used to obtain bounding-box for a cluster of points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cloudCluster</td><td>a cluster of point-cloud</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>3D Bounding-Box </dd></dl>
+
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00464">464</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4fc09affe62218081e85ed5818bf2ef"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetapl.html#a196ce1d5bf399fc26f03797e6a8d03ff">tapl::ResultCode</a> tapl::pte::segmentPlane </td>
+          <td>(</td>
+          <td class="paramtype">typename pcl::PointCloud&lt; PointT &gt;::Ptr&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::pair&lt; typename pcl::PointCloud&lt; PointT &gt;::Ptr, typename pcl::PointCloud&lt; PointT &gt;::Ptr &gt; &amp;&#160;</td>
+          <td class="paramname"><em>segResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxIterations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distanceThreshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>usePCL</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function segments a plane within a point-cloud. Points within the plane are inliers and other points are outliers. It populates two separate point-clouds corresponding to inliers and outliers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cloud</td><td>point-cloud to segment </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">segResult</td><td>segmentation result Inliers: segResult.first Outliers: segResult.second </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxIteration</td><td>Maximum number of iterations for plane fitting with RANSAC </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distanceThreshold</td><td>Distance threshold between point and plane for classifying a point as an inlier. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">usePCL</td><td>Whether to use PCL of TAPL's implementation of RANSAC</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacetapl.html#a196ce1d5bf399fc26f03797e6a8d03ffafbdd78b1e8654e11461f37fea68c6195">tapl::SUCCESS</a> if success </dd>
+<dd>
+<a class="el" href="namespacetapl.html#a196ce1d5bf399fc26f03797e6a8d03ffaa6e243674a964518a62bdda7f20f6453">tapl::FAILURE</a> if failure </dd></dl>
+
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00288">288</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacetapl_1_1pte_aa4fc09affe62218081e85ed5818bf2ef_cgraph.png" border="0" usemap="#namespacetapl_1_1pte_aa4fc09affe62218081e85ed5818bf2ef_cgraph" alt=""/></div>
+<map name="namespacetapl_1_1pte_aa4fc09affe62218081e85ed5818bf2ef_cgraph" id="namespacetapl_1_1pte_aa4fc09affe62218081e85ed5818bf2ef_cgraph">
+<area shape="rect" id="node2" href="classtapl_1_1pte_1_1Plane.html#ad56c96d9b115a8a482e851c8139feb97" title="tapl::pte::Plane::Ransac" alt="" coords="213,5,376,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a928126360beb48c632ff331ca560a1b0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -148,19 +458,27 @@ template&lt;typename PointT &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>affine transform on a point</p>
+
+<p>affine transform on a point </p>
 <p>Apply affine transforms on point given in world coordinate</p>
 <p>Camera Coordinate System: X -&gt; To the right Y -&gt; Down Z -&gt; Forward - Direction where the camera is pointing</p>
-<p>World Coordinate System: X -&gt; Forward - Direction where the camera is pointing Y -&gt; To the left Z -&gt; Up </p>
+<p>World Coordinate System: X -&gt; Forward - Direction where the camera is pointing Y -&gt; To the left Z -&gt; Up</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>point in world coordinate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>point in camera coordinate </dd></dl>
 
-<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00200">200</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00207">207</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacetapl_1_1pte_a928126360beb48c632ff331ca560a1b0_cgraph.png" border="0" usemap="#namespacetapl_1_1pte_a928126360beb48c632ff331ca560a1b0_cgraph" alt=""/></div>
 <map name="namespacetapl_1_1pte_a928126360beb48c632ff331ca560a1b0_cgraph" id="namespacetapl_1_1pte_a928126360beb48c632ff331ca560a1b0_cgraph">
-<area shape="rect" id="node2" href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200" title="tapl::pte::world2CamRotation" alt="" coords="260,5,452,32"/>
+<area shape="rect" id="node2" href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200" title="returns world to camera rotation matrix " alt="" coords="260,5,452,32"/>
 <area shape="rect" id="node3" href="ptEngine_8hpp.html#af587759c004d4f86b1c5821066cca76a" title="degreesToRadians" alt="" coords="500,5,631,32"/>
 </map>
 </div>
@@ -180,11 +498,12 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>returns world to camera rotation matrix</p>
-<p>Camera Coordinate System: X -&gt; To the right Y -&gt; Down Z -&gt; Forward - Direction where the camera is pointing</p>
-<p>World Coordinate System: X -&gt; Forward - Direction where the camera is pointing Y -&gt; To the left Z -&gt; Up </p>
 
-<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00149">149</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
+<p>returns world to camera rotation matrix </p>
+<p>Camera Coordinate System: X -&gt; To the right Y -&gt; Down Z -&gt; Forward - Direction where the camera is pointing</p>
+<p>World Coordinate System: X -&gt; Forward - Direction where the camera is pointing Y -&gt; To the left Z -&gt; Up </p><dl class="section return"><dt>Returns</dt><dd>rotation matrix </dd></dl>
+
+<p>Definition at line <a class="el" href="ptEngine_8hpp_source.html#l00150">150</a> of file <a class="el" href="ptEngine_8hpp_source.html">ptEngine.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -201,7 +520,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacetapl_1_1pte_a874efe99ea9c6366ae0c0329554ad200_icgraph.png" border="0" usemap="#namespacetapl_1_1pte_a874efe99ea9c6366ae0c0329554ad200_icgraph" alt=""/></div>
 <map name="namespacetapl_1_1pte_a874efe99ea9c6366ae0c0329554ad200_icgraph" id="namespacetapl_1_1pte_a874efe99ea9c6366ae0c0329554ad200_icgraph">
-<area shape="rect" id="node2" href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0" title="tapl::pte::world2CamCoordinate" alt="" coords="245,5,452,32"/>
+<area shape="rect" id="node2" href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0" title="affine transform on a point " alt="" coords="245,5,452,32"/>
 </map>
 </div>
 </p>

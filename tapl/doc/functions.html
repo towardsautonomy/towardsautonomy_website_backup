@@ -97,6 +97,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_v"><span>v</span></a></li>
+      <li><a href="#index_x"><span>x</span></a></li>
+      <li><a href="#index_y"><span>y</span></a></li>
+      <li><a href="#index_z"><span>z</span></a></li>
       <li class="current"><a href="#index_0x7e"><span>~</span></a></li>
     </ul>
   </div>
@@ -138,6 +141,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>cameraFrame
 : <a class="el" href="structtapl_1_1DataFrame.html#a6a9523806fd3280ddd54085669572288">tapl::DataFrame</a>
+</li>
+<li>clearScene()
+: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a912479d651c5a9bcd5a24b77025f10c0">tapl::viz::Visualizer</a>
 </li>
 <li>clustering()
 : <a class="el" href="classtapl_1_1pte_1_1EuclideanCluster.html#a7006b8b1a10af362b0001e4f36d3b4fb">tapl::pte::EuclideanCluster</a>
@@ -309,14 +315,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classtapl_1_1pte_1_1Line.html#a50a79f0b345fd3b9fb830a035ccf8e1d">tapl::pte::Line&lt; PointT &gt;</a>
 , <a class="el" href="classtapl_1_1pte_1_1Plane.html#ad56c96d9b115a8a482e851c8139feb97">tapl::pte::Plane&lt; PointT &gt;</a>
 </li>
+<li>renderBbox3d()
+: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a3915205a2348669a0399b3f1a2e8551c">tapl::viz::Visualizer</a>
+</li>
 <li>renderLine()
 : <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a44e1d90914fa8129f4e4a26b4ad67718">tapl::viz::Visualizer</a>
 </li>
 <li>renderPointCloud()
-: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#adfbebe61032e265beba4b2276e1c7858">tapl::viz::Visualizer</a>
+: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a5c6a85b27b5042f09b0e7034ee73209c">tapl::viz::Visualizer</a>
 </li>
 <li>renderPose()
-: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#aaf2f80b7569aabec720105ecc9a95996">tapl::viz::Visualizer</a>
+: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a22497fa3f1d2738c1b0a3f963a7c43dd">tapl::viz::Visualizer</a>
 </li>
 <li>renderScene()
 : <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a8ec08b4e37523fb75731b58748224035">tapl::viz::Visualizer</a>
@@ -325,7 +334,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#aed14efd9e578a4b6013b9745e07acea1">tapl::viz::Visualizer</a>
 </li>
 <li>renderSphere()
-: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#ac65eafca7d0b3e61330822fa4cf30371">tapl::viz::Visualizer</a>
+: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a1ffe49d8e3b2693b0c0a4ccd10edac9d">tapl::viz::Visualizer</a>
 </li>
 <li>right
 : <a class="el" href="structtapl_1_1pte_1_1Node.html#ab68a326fa1516aa082032dfd05065dd9">tapl::pte::Node</a>
@@ -358,7 +367,37 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>Visualizer()
-: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a43dc2c39814634258004d2d22a4be60d">tapl::viz::Visualizer</a>
+: <a class="el" href="classtapl_1_1viz_1_1Visualizer.html#a56215eefb4712acf78a922485d844f50">tapl::viz::Visualizer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
+<li>x_max
+: <a class="el" href="structtapl_1_1BBox3d.html#ae7fd61bfb33a3c5fbc7b531960d7e543">tapl::BBox3d</a>
+</li>
+<li>x_min
+: <a class="el" href="structtapl_1_1BBox3d.html#a7f28356e5e1f7503770b352c457d4aed">tapl::BBox3d</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
+<li>y_max
+: <a class="el" href="structtapl_1_1BBox3d.html#ade66b3bf2e0dcf01b790d560826b64e1">tapl::BBox3d</a>
+</li>
+<li>y_min
+: <a class="el" href="structtapl_1_1BBox3d.html#a63dd683fccb905aa43e3d363c0829581">tapl::BBox3d</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_z"></a>- z -</h3><ul>
+<li>z_max
+: <a class="el" href="structtapl_1_1BBox3d.html#a6b1ff639ba484bdcf6185d53870d623f">tapl::BBox3d</a>
+</li>
+<li>z_min
+: <a class="el" href="structtapl_1_1BBox3d.html#a62b2d92bf15298ad86a7159aadd232ab">tapl::BBox3d</a>
 </li>
 </ul>
 

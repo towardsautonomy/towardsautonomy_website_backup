@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['get',['get',['../classtapl_1_1RingBuffer.html#a86bd7fbf2c52259184c4e84feaae78d3',1,'tapl::RingBuffer']]],
-  ['get_5fptr',['get_ptr',['../classtapl_1_1RingBuffer.html#ae1c8614abf72c558c244c87b8ced7bf7',1,'tapl::RingBuffer']]],
-  ['getdescriptors',['getDescriptors',['../structtapl_1_1CameraFrame.html#a2ecce3e76a8efdce3c799b404dcb790f',1,'tapl::CameraFrame']]],
-  ['getessentialmatrix',['getEssentialMatrix',['../structtapl_1_1DataFrame.html#a0f7f2252e9c335dfca944d64508b72b4',1,'tapl::DataFrame']]],
-  ['getfundamentalmatrix',['getFundamentalMatrix',['../structtapl_1_1DataFrame.html#a3e40c1a7fc883d041c1bc845ed7a3bb8',1,'tapl::DataFrame']]],
-  ['getimage',['getImage',['../structtapl_1_1CameraFrame.html#a173bf0e309ba2a499425bb4d881c3a8f',1,'tapl::CameraFrame']]],
-  ['getkeypoints',['getKeypoints',['../structtapl_1_1CameraFrame.html#aafb04677ac368c41616786d74cada301',1,'tapl::CameraFrame']]],
-  ['getkptsmatches',['getKptsMatches',['../structtapl_1_1DataFrame.html#ad6784247bd772557ed661a27c011e978',1,'tapl::DataFrame']]],
-  ['getpose',['getPose',['../structtapl_1_1DataFrame.html#af15fd3aeaaf932b2db3e18e81b0764f2',1,'tapl::DataFrame']]],
-  ['getsize',['getSize',['../classtapl_1_1RingBuffer.html#a5dfe06176646eeacfb89c464b15815ff',1,'tapl::RingBuffer']]],
-  ['gettriangulatedpoints',['getTriangulatedPoints',['../structtapl_1_1DataFrame.html#a77e09d7c142e062a4ed8fdbc11bba220',1,'tapl::DataFrame']]]
+  ['failure',['FAILURE',['../namespacetapl.html#a196ce1d5bf399fc26f03797e6a8d03ffaa6e243674a964518a62bdda7f20f6453',1,'tapl']]],
+  ['fitls',['fitLS',['../classtapl_1_1pte_1_1Line.html#a705b09b731117dae2d47d91a423ff828',1,'tapl::pte::Line::fitLS()'],['../classtapl_1_1pte_1_1Plane.html#a1f943f3b0304c91e86a75a11579dee95',1,'tapl::pte::Plane::fitLS()']]],
+  ['fitsvd',['fitSVD',['../classtapl_1_1pte_1_1Line.html#aa1de142cfa7dd5b26093a99df05d9f8c',1,'tapl::pte::Line::fitSVD()'],['../classtapl_1_1pte_1_1Plane.html#a3e0c52b8169fd9edf4c5bbb816432348',1,'tapl::pte::Plane::fitSVD()']]],
+  ['fps',['FPS',['../namespacetapl_1_1viz.html#a99e496921984514dbc7bcef809f50150a85d72fbe54240f98c1ed1ccd5fe8b7d9',1,'tapl::viz']]]
 ];
