@@ -173,10 +173,32 @@ Functions</h2></td></tr>
 <tr class="memitem:a4ac6c9ad7b92e0e724726603b7714c88"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ptEngine_8hpp.html#a4ac6c9ad7b92e0e724726603b7714c88">radiansToDegrees</a> (float angleRadians)</td></tr>
 <tr class="separator:a4ac6c9ad7b92e0e724726603b7714c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a874efe99ea9c6366ae0c0329554ad200"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200">tapl::pte::world2CamRotation</a> ()</td></tr>
+<tr class="memdesc:a874efe99ea9c6366ae0c0329554ad200"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns world to camera rotation matrix  <a href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200">More...</a><br /></td></tr>
 <tr class="separator:a874efe99ea9c6366ae0c0329554ad200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a928126360beb48c632ff331ca560a1b0"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
 <tr class="memitem:a928126360beb48c632ff331ca560a1b0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0">tapl::pte::world2CamCoordinate</a> (PointT &amp;point)</td></tr>
+<tr class="memdesc:a928126360beb48c632ff331ca560a1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">affine transform on a point  <a href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0">More...</a><br /></td></tr>
 <tr class="separator:a928126360beb48c632ff331ca560a1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c0b0806659501276e0b33042e2fa5b"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:a48c0b0806659501276e0b33042e2fa5b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a48c0b0806659501276e0b33042e2fa5b">tapl::pte::downsampleCloud</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, float resolution)</td></tr>
+<tr class="memdesc:a48c0b0806659501276e0b33042e2fa5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Downsample point-cloud.  <a href="namespacetapl_1_1pte.html#a48c0b0806659501276e0b33042e2fa5b">More...</a><br /></td></tr>
+<tr class="separator:a48c0b0806659501276e0b33042e2fa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa36d31de7cd145e875901dfa13a616"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:adaa36d31de7cd145e875901dfa13a616"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#adaa36d31de7cd145e875901dfa13a616">tapl::pte::cropCloud</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, float x_min, float x_max, float y_min, float y_max, float z_min, float z_max)</td></tr>
+<tr class="memdesc:adaa36d31de7cd145e875901dfa13a616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crop point-cloud given a region of interest.  <a href="namespacetapl_1_1pte.html#adaa36d31de7cd145e875901dfa13a616">More...</a><br /></td></tr>
+<tr class="separator:adaa36d31de7cd145e875901dfa13a616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fc09affe62218081e85ed5818bf2ef"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:aa4fc09affe62218081e85ed5818bf2ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetapl.html#a196ce1d5bf399fc26f03797e6a8d03ff">tapl::ResultCode</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#aa4fc09affe62218081e85ed5818bf2ef">tapl::pte::segmentPlane</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, std::pair&lt; typename pcl::PointCloud&lt; PointT &gt;::Ptr, typename pcl::PointCloud&lt; PointT &gt;::Ptr &gt; &amp;segResult, int maxIterations, float distanceThreshold, bool usePCL=false)</td></tr>
+<tr class="memdesc:aa4fc09affe62218081e85ed5818bf2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function segments a plane within a point-cloud. Points within the plane are inliers and other points are outliers. It populates two separate point-clouds corresponding to inliers and outliers.  <a href="namespacetapl_1_1pte.html#aa4fc09affe62218081e85ed5818bf2ef">More...</a><br /></td></tr>
+<tr class="separator:aa4fc09affe62218081e85ed5818bf2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e06eaa64248177550033adb709fb3d"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:a69e06eaa64248177550033adb709fb3d"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; typename pcl::PointCloud&lt; PointT &gt;::Ptr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#a69e06eaa64248177550033adb709fb3d">tapl::pte::euclideanClustering</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloud, float clusterTolerance, int minNumPoints, int maxNumPoints, bool usePCL=false)</td></tr>
+<tr class="memdesc:a69e06eaa64248177550033adb709fb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform euclidean clustering within a point-cloud. Returns a vector of cluster clouds.  <a href="namespacetapl_1_1pte.html#a69e06eaa64248177550033adb709fb3d">More...</a><br /></td></tr>
+<tr class="separator:a69e06eaa64248177550033adb709fb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b4a53485d62466140d43448496536b"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
+<tr class="memitem:ac4b4a53485d62466140d43448496536b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structtapl_1_1BBox3d.html">tapl::BBox3d</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetapl_1_1pte.html#ac4b4a53485d62466140d43448496536b">tapl::pte::getBoundingBox</a> (typename pcl::PointCloud&lt; PointT &gt;::Ptr cloudCluster)</td></tr>
+<tr class="memdesc:ac4b4a53485d62466140d43448496536b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is used to obtain bounding-box for a cluster of points.  <a href="namespacetapl_1_1pte.html#ac4b4a53485d62466140d43448496536b">More...</a><br /></td></tr>
+<tr class="separator:ac4b4a53485d62466140d43448496536b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file provides APIs for all point related functions. This includes point-cloud processing, point transformations,</p>
@@ -213,8 +235,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ptEngine_8hpp_af587759c004d4f86b1c5821066cca76a_icgraph.png" border="0" usemap="#ptEngine_8hpp_af587759c004d4f86b1c5821066cca76a_icgraph" alt=""/></div>
 <map name="ptEngine_8hpp_af587759c004d4f86b1c5821066cca76a_icgraph" id="ptEngine_8hpp_af587759c004d4f86b1c5821066cca76a_icgraph">
-<area shape="rect" id="node2" href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200" title="tapl::pte::world2CamRotation" alt="" coords="184,5,376,32"/>
-<area shape="rect" id="node3" href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0" title="tapl::pte::world2CamCoordinate" alt="" coords="424,5,631,32"/>
+<area shape="rect" id="node2" href="namespacetapl_1_1pte.html#a874efe99ea9c6366ae0c0329554ad200" title="returns world to camera rotation matrix " alt="" coords="184,5,376,32"/>
+<area shape="rect" id="node3" href="namespacetapl_1_1pte.html#a928126360beb48c632ff331ca560a1b0" title="affine transform on a point " alt="" coords="424,5,631,32"/>
 </map>
 </div>
 </p>

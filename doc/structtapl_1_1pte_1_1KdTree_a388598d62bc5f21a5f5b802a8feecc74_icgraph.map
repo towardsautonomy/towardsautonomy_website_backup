@@ -1,3 +1,4 @@
 <map id="tapl::pte::KdTree::insertHelper" name="tapl::pte::KdTree::insertHelper">
 <area shape="rect" id="node2" href="$structtapl_1_1pte_1_1KdTree.html#acaf4969659031fa301d1b7e46d6b3b77" title="tapl::pte::KdTree::\linsert" alt="" coords="180,5,307,47"/>
+<area shape="rect" id="node3" href="$namespacetapl_1_1pte.html#a69e06eaa64248177550033adb709fb3d" title="Perform euclidean clustering within a point&#45;cloud. Returns a vector of cluster clouds. " alt="" coords="355,13,545,39"/>
 </map>

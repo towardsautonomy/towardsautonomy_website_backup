@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kdtree',['KdTree',['../structtapl_1_1pte_1_1KdTree.html',1,'tapl::pte']]]
+  ['euclideancluster',['EuclideanCluster',['../classtapl_1_1pte_1_1EuclideanCluster.html',1,'tapl::pte']]]
 ];

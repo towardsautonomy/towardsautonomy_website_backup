@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dataframe',['DataFrame',['../structtapl_1_1DataFrame.html',1,'tapl']]]
+  ['cameraframe',['CameraFrame',['../structtapl_1_1CameraFrame.html',1,'tapl']]]
 ];

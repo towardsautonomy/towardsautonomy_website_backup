@@ -2,6 +2,7 @@ var searchData=
 [
   ['get',['get',['../classtapl_1_1RingBuffer.html#a86bd7fbf2c52259184c4e84feaae78d3',1,'tapl::RingBuffer']]],
   ['get_5fptr',['get_ptr',['../classtapl_1_1RingBuffer.html#ae1c8614abf72c558c244c87b8ced7bf7',1,'tapl::RingBuffer']]],
+  ['getboundingbox',['getBoundingBox',['../namespacetapl_1_1pte.html#ac4b4a53485d62466140d43448496536b',1,'tapl::pte']]],
   ['getdescriptors',['getDescriptors',['../structtapl_1_1CameraFrame.html#a2ecce3e76a8efdce3c799b404dcb790f',1,'tapl::CameraFrame']]],
   ['getessentialmatrix',['getEssentialMatrix',['../structtapl_1_1DataFrame.html#a0f7f2252e9c335dfca944d64508b72b4',1,'tapl::DataFrame']]],
   ['getfundamentalmatrix',['getFundamentalMatrix',['../structtapl_1_1DataFrame.html#a3e40c1a7fc883d041c1bc845ed7a3bb8',1,'tapl::DataFrame']]],

@@ -6,5 +6,6 @@ var cvEngine_8hpp =
     [ "detectAndMatchKpts", "cvEngine_8hpp.html#a34cb000d47a121549e81900da9913299", null ],
     [ "detectKeypoints", "cvEngine_8hpp.html#ad74b56dc35c6a902870725543d5df419", null ],
     [ "extractDescriptors", "cvEngine_8hpp.html#a02712316099758c2b4d0bb0e4e5dc219", null ],
-    [ "matchDescriptors", "cvEngine_8hpp.html#ae2699cc690841efd3b7a3179be1fb889", null ]
+    [ "matchDescriptors", "cvEngine_8hpp.html#ae2699cc690841efd3b7a3179be1fb889", null ],
+    [ "stitchPanaromic", "cvEngine_8hpp.html#aab4041f410589ff960febecf36b3ee2b", null ]
 ];

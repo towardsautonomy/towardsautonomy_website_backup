@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visualizer',['Visualizer',['../classtapl_1_1viz_1_1Visualizer.html',1,'tapl::viz']]]
+  ['ringbuffer',['RingBuffer',['../classtapl_1_1RingBuffer.html',1,'tapl']]]
 ];
