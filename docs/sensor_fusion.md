@@ -19,16 +19,21 @@ Many object detection methods have been in research in automotive industry for q
 The Kalman Filter has long been regarded as the optimal solution to many tracking and data prediction tasks. It is composed of two basic functions: **Predict** and **Update**. The *Predict* function predicts vehicle state at timestamp *(k + 1)* given its state at timestamp *k* based on the knowledge of vehicle's dynamics which we represent as motion model. The *Update* model then updates/corrects the believe about its position at timestamp *(k + 1)* after a new measurement have been received. The predict and update equations provide a recursive way to compute the posterior of the state for every measurement that we receive. 
 
 ---
-| Error in x position and velocity  |  Error in y position and velocity |
-|:---------------------------------:|:---------------------------------:|
-|![](/docs/sensor_fusion/x_err.png)             | ![](/docs/sensor_fusion/y_err.png)            |  
 
-*Figure 1: X and Y position error plots*
+![](/docs/sensor_fusion/x_err.png)
+
+*Figure 1: Error in x position and velocity*
+
+---
+
+![](/docs/sensor_fusion/y_err.png)
+
+*Figure 2: Error in y position and velocity*
 
 ---
 
 ![](/docs/sensor_fusion/states.png)  
-*Figure 2: Plot of 2D position and velocity*
+*Figure 3: Plot of 2D position and velocity*
 
 ---
 
