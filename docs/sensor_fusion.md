@@ -14,12 +14,27 @@ Most commonly used sensors used for estimating host vehicle's position and local
 
 Many object detection methods have been in research in automotive industry for quite some time. These methods uses one of many sensors like Cameras, LIDARs, RADARs, V2X, Stereo Cameras. All these methods work on detecting objects and finding their current position and/or estimate their future position + trajectories. If the vehicle has more than one sensor installed, it could exploit these sensors by fusing their individual object detection result and obtain an accurate position that can be trusted with more confidence.
 
-Sensor Fusion module uses two basic functions: **Predict** and **Update**. The *Predict* function predicts vehicle state at timestamp *(k + 1)* given its state at timestamp *k* based on the knowledge of vehicle's dynamics which we represent as motion model. The *Update* model then updates/corrects the believe about its position at timestamp *(k + 1)* after a new measurement have been received. The predict and update equations provide a recursive way to compute the posterior of the state for every measurement that we receive. This is where Kalman Filter comes into picture and have been heavily used for Sensor Fusion.
+## [Kalman Filter](https://github.com/towardsautonomy/kalman_filter)
+
+The Kalman Filter has long been regarded as the optimal solution to many tracking and data prediction tasks. It is composed of two basic functions: **Predict** and **Update**. The *Predict* function predicts vehicle state at timestamp *(k + 1)* given its state at timestamp *k* based on the knowledge of vehicle's dynamics which we represent as motion model. The *Update* model then updates/corrects the believe about its position at timestamp *(k + 1)* after a new measurement have been received. The predict and update equations provide a recursive way to compute the posterior of the state for every measurement that we receive. 
+
+---
+| Error in x position and velocity  |  Error in y position and velocity |
+|:---------------------------------:|:---------------------------------:|
+|![](/docs/sensor_fusion/x_err.png)             | ![](/docs/sensor_fusion/y_err.png)            |  
+
+*Figure 1: X and Y position error plots*
+
+---
+
+![](/docs/sensor_fusion/states.png)  
+*Figure 2: Plot of 2D position and velocity*
+
+---
+
+### [GitHub](https://github.com/towardsautonomy/kalman_filter) 
 
 Want to learn more about Kamlan Filter? A good tutorial on Kalman Filter from MIT can be found [here](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf). C++ and Python implementation for 1D and 2D Kalman Filter can be downloaded below.
-
-[Python implementation of 1D and 2D Kalman Filter](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/kf_python)   
-[C++ implementation of 2D Kalman Filter](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/kf_cpp)
 
 Going little bit into the technicality here, Kalman Filter basically assumes the state and noise to be Gaussian and can be completely characterized by N(μ, σ²). Assuming the parameters to be Gaussian is the reason Kalman Filter works the best when measurement to estimation transformation is linear. For example, an object detection technique that uses a sensor which could provide objects x and y position directly would lead to a linear transformation for the Kalman Filter's 'Update' process. A non-linear transformation of a gaussian parameter results in a non-gaussian parameter and therefore Kalman Filter cannot be used in such cases for position estimation. However, this does not mean that we cannot deal with non-linear transformations. There is a non-linear extension of Kalman Filter called **Extended Kalman Filter** ([Find an interactive tutorial here](https://home.wlu.edu/~levys/kalman_tutorial/)) which linearizes the parameters about an estimate of the current mean and covariance. While EKF (Extended Kalman Filter) works well with non-linear transformation, it does have some weaknesses. For highly non-linear problems, the EKF encounters issues with both accuracy and stability. Also, Jacobian computations are required in order to linearize the non-linear function using a first-order Taylor series.
 

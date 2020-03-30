@@ -10,56 +10,74 @@ permalink: /perception
 
 **Perception** is one of the most significant systems of autonomous vehicles/robots. It allows the vehicle to perceive the 360-degrees environment around it. Perception system helps the vehicle understands its surroundings like drivable area, lanes, vehicles, pedestrians, road boundaries, traffic signs, and traffic lights. This system uses multiple sensors like LiDAR, RADAR, and Camera to perceive the world and detect objects. This page explores various subsystems of perception and shows some methods of ground-plane segmentation, object detection, lane detection, and object classification.
 
+---
+
+### DAC-DC : Divide and Concquer for Detection and Classification
+
+![](/docs/perception/img/dac-dc.gif)
+
+This is a modified version of YOLO for performing 2D object detection and tracking. The model was trained and tested on several datasets and seems to be performing quite well. The results shown here are for virtualKITTI dataset across multiple weather conditions and camera positions.
+
+![](/docs/perception/img/dacdc-result.png)
+*Figure 1: Result of DAC-DC on virtualKITTI dataset. Blue boxes are ground-truth, and red boxes are predictions*
+
+#### [GitHub](https://github.com/towardsautonomy/DAC-DC)
+
+---
+
 ### [LiDAR based Ground-Plane Segmentation and Object Detection](/perception/lidar_object_detection_clustering)  
-![](docs/perception/img/lidar_objects_front_view.gif)
+![](/docs/perception/img/lidar_object_detection.gif)
 
----
+#### This has been implemented as part of [TAPL](https://www.towardsautonomy.com/tapl/index.html). The pipeline can be explored [here](https://github.com/towardsautonomy/TAPL#lidar-object-detection)
 
-#### [LiDAR Camera Fusion](/perception/lidar_camera_fusion)  
-![](docs/perception/img/lidar_camera_fusion.gif)
+**Point-Cloud** is a set of data points in 3D space which represents the LiDAR laser rays reflected by objects. Each point within the point-cloud is the point of interaction between the transmitted ray and the environment. Ground plane can be easily segmented out by finding planes within the point-cloud and selecting the one with maximum number of inliers. This can be achieved using a very well known algorithm, RANSAC (RANdom SAmple Consensus).
 
----
+**RANSAC** first picks a few samples randomly within the point-cloud and fits a plane through that. Then it counts the number of inliers by computing closest distance between the plane and all other points. If this distance is within a certain threshold, then this point is added to the list of inliers. This process is repeated multiple number of times to find the fit that estimates the ground-plane. A plane can be fit through points using either SVD or Least-Squares method.
 
-## Computer Vision
+Once we have segmented the ground-plane, we can look into all other points to find objects (if any) within the point-cloud. To find an object, we can take advantage of the fact that the points corresponding to the object are distributed very close to each other. If we can find clusters of points within the point-cloud, then the clusters will correspond to objects like vehicles, pedestrians, road boundary walls, buildings, and trees. Further, we can employ point-cloud filtering using multiple constraints such as *bounding-box* length, width, and height to differentiate between different classes. A 3D **bounding-box** defines the boundary of objects such as *x_min, x_max, y_min, y_max, z_min, and z_max*.
 
-Computer vision is a field of computer science that works on enabling computers to see, identify and process images in the same way that human vision does, and then provide appropriate output. It is like imparting human intelligence and instincts to a computer. In reality though, it is a difficult task to enable computers to recognize images of different objects.
+**Clustering** requires looking for all the points closer to a *seed* point. The computation can very quickly increase exponentially in the brute-force method of computing distance between all the possible points. If the points are stored in a k-d tree structure, then the search problem becomes much easier and computationally cheap. **Euclidian Clustering** method is utilized in this project to find clusters within the point-cloud. This clustering method uses k-d tree search to find points that are close together.
 
-Computer vision is closely linked with machine learning and artificial intelligence, as the computer must interpret what it sees, and then perform appropriate analysis or act accordingly.
+![](/docs/perception/img/kd_tree.png)  
+*Figure: k-d tree visualization for in 3D space*
 
-Computer vision's goal is not only to see, but also process and provide useful results based on the observation. For example, a computer could create a 3-D image from a 2-D image, such as those in cars, and provide important data to the car and/or driver. For example, cars could be fitted with computer vision which would be able to identify and distinguish objects on and around the road such as traffic lights, pedestrians, traffic signs and so on, and act accordingly. The intelligent device could provide inputs to the driver or even make the car stop if there is a sudden obstacle on the road.
-
-When a human who is driving a car sees someone suddenly move into the path of the car, the driver must react instantly. In a split second, human vision has completed a complex task, that of identifying the object, processing data and deciding what to do. Computer vision's aim is to enable computers to perform the same kind of tasks as humans with the same efficiency.
-
-Computer Vision can help Autonomous Cars perceive its surroundings and localize itself. It can do so by detecting the lanes, vehicles, pedestrians, traffic signs, and traffic lights on the road. Some of these are explained here and their implementation with results are given in their respective sections. Contact [Shubham Shrivastava](http://www.towardsautonomy.com/#shubham) for any questions or concerns.
-
----
-
-#### [Lane Detection and Tracking using Birds-Eye view](/perception/lane_detection)  
-![](docs/perception/img/lane_detection/straight_lines1.jpg)
-
----
-
-#### [Object Detection, Classification, and Localization](/dl/obj_detection)
-![](docs/perception/img/yolov2_objects.gif)
-
----
-
-#### [Camera Based Image Feature Detection and Tracking](/perception/camera_image_feature_tracking)
-![](docs/perception/img/matching_points.png)
-
----
-
-#### [Vehicle Detection using SVM classifier](/perception/vehicle_detection)  
-![](img/lane_veh.gif)
+k-d tree insert and search methods, euclidean clustering, line and plane fitting, and RANSAC are implemented as part of TAPL.
 
 ---
 
 #### [Semantic Segmentation](/dl/semseg)
-![](docs/perception/img/semseg.gif)
+![](/docs/perception/img/semseg.gif)
+
+[![Semantic Segmentation](/docs/dl/img/semseg/thumbnail.png)](https://youtu.be/HzW1ZUwmlTQ "Semantic Segmentation")
+
+Semantic Segmentation is a fascinating application of deep learning and has become very popular among machine learning researchers. Semantic Segmentation or more commonly known as SemSeg is understanding an image at pixel level. Technically speaking, it is a CNN (Convolution Neural Network) which can classify every single pixel in an image as an object class. This also paves the way towards complete scene understanding. So much research have been done in this area since 2014 (Benchmarking Data: [https://www.cityscapes-dataset.com/benchmarks/](https://www.cityscapes-dataset.com/benchmarks/)) and now we are at a point where we have enough data and computational power to actually start seeing SemSeg in our life. SemSeg can also be applied to videos and 3D point-cloud data to obtain fine-grained semantics. Some of the commonly known CNN architectures for SemSeg are: FCN, VGG-16, SegNet, DeepLap, Dilated Convolutions
+
+Inferring the knowledge about an image has a number of applications including in autonomous driving. SemSeg can help autonomous vehicles learn about its surroundings, specifically inferring the information about free road space and objects around it. Successful and accurate pixel-level prediction however depends on how well the network has been trained. Thanks to organizations like Cityscapes and KITTI, today we have large fine-annotated pixel-level datasets available to work with.
+
+Here I am presenting a 20 layer CNN architecture I created: SSNet. This architecture is inspired by VGG-16 and SegNet and is shown below. This is an encoder-decoder architecture in which we have 10 encoder layers followed by 10 corresponding decoder layers. Number of filters for each encoder layer are: first 2 layers - 64 filters, next 2 layers - 128 filters, next 3 layers - 256 filters, next 3 layers - 512 filters. The corresponding decoder have same number of filters. The decoder layers are followed by a softmax prediction layer with number of filters equal to the number of prediction classes.
+
+![](/docs/dl/img/semseg/SSNet.png)
+
+This network was trained on just 200 labelled training images obtained from [KITTI pixel-level semantic dataset](http://www.cvlibs.net/datasets/kitti/eval_semseg.php?benchmark=semantics2015). The results shown in this post were generated by running this network on KITTI testing datasets. The video shown at the top only displays road and vehicle classes. Few semantic results generated for all the classes are shown below.  
+
+| Test Image                        |  SSNet Prediction                 |
+|:---------------------------------:|:---------------------------------:|
+|![](/docs/dl/img/semseg/test1.png) | ![](/docs/dl/img/semseg/pred1.png)|
+|![](/docs/dl/img/semseg/test2.png) | ![](/docs/dl/img/semseg/pred2.png)|
+|![](/docs/dl/img/semseg/test3.png) | ![](/docs/dl/img/semseg/pred3.png)|
+
+Implementation of SSNet and other helper python scripts can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/semantic_segmentation_ssnet). Pretrained weights can be downloaded [here](https://drive.google.com/open?id=1KG_-paGZmyxnSfPZGEv7uq_vTduXrLr3).
 
 ---
 
-#### [Traffic Sign Classification using CNN](/perception/traffic_sign_classification)
-![](docs/perception/img/traffic_sign_classification/test_detection.png)
+#### [Lane Detection and Tracking using Birds-Eye view](/perception/lane_detection)  
+![](/docs/perception/img/lane_detection/straight_lines1.jpg)
+
+---
+
+#### [Camera Based Image Feature Detection and Tracking](/perception/camera_image_feature_tracking)
+![](/docs/perception/img/matching_points.png)
+
+#### This has been implemented as part of [TAPL](https://www.towardsautonomy.com/tapl/index.html). The pipeline can be explored [here](https://github.com/towardsautonomy/TAPL#image-feature-detection-and-tracking)
 
 ---

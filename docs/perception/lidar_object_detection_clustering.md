@@ -27,6 +27,6 @@ Once we have segmented the ground-plane, we can look into all other points to fi
 ![](/docs/perception/img/kd_tree.png)  
 *k-d tree visualization for in 3D space*
 
-k-d tree insert and search methods, euclidean clustering, line and plane fitting, and RANSAC are implemented in helper/helper.cpp . **PCL** (Point-Cloud Library) is used for point-cloud definition, and visualization.
+k-d tree insert and search methods, euclidean clustering, line and plane fitting, and RANSAC are implemented as part of TAPL.
 
-## The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/lidar_object_detection_clustering)
+## This has been implemented as part of [TAPL](https://www.towardsautonomy.com/tapl/index.html). The pipeline can be explored [here](https://github.com/towardsautonomy/TAPL#lidar-object-detection)
