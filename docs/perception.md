@@ -12,7 +12,7 @@ permalink: /perception
 
 ---
 
-### DAC-DC : Divide and Concquer for Detection and Classification
+### [DAC-DC : Divide and Concquer for Detection and Classification](https://github.com/towardsautonomy/DAC-DC)
 
 ![](/docs/perception/img/dac-dc.gif)
 
@@ -25,7 +25,7 @@ This is a modified version of YOLO for performing 2D object detection and tracki
 
 ---
 
-### [LiDAR based Ground-Plane Segmentation and Object Detection](/perception/lidar_object_detection_clustering)  
+### [LiDAR based Ground-Plane Segmentation and Object Detection](https://github.com/towardsautonomy/TAPL#lidar-object-detection)  
 ![](/docs/perception/img/lidar_object_detection.gif)
 
 #### This has been implemented as part of [TAPL](https://www.towardsautonomy.com/tapl/index.html). The pipeline can be explored [here](https://github.com/towardsautonomy/TAPL#lidar-object-detection)
@@ -45,7 +45,7 @@ k-d tree insert and search methods, euclidean clustering, line and plane fitting
 
 ---
 
-#### [Semantic Segmentation](/dl/semseg)
+#### [Semantic Segmentation](https://github.com/towardsautonomy/ssnet_semseg)
 ![](/docs/perception/img/semseg.gif)
 
 [![Semantic Segmentation](/docs/dl/img/semseg/thumbnail.png)](https://youtu.be/HzW1ZUwmlTQ "Semantic Segmentation")
@@ -66,7 +66,9 @@ This network was trained on just 200 labelled training images obtained from [KIT
 |![](/docs/dl/img/semseg/test2.png) | ![](/docs/dl/img/semseg/pred2.png)|
 |![](/docs/dl/img/semseg/test3.png) | ![](/docs/dl/img/semseg/pred3.png)|
 
-Implementation of SSNet and other helper python scripts can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/semantic_segmentation_ssnet). Pretrained weights can be downloaded [here](https://drive.google.com/open?id=1KG_-paGZmyxnSfPZGEv7uq_vTduXrLr3).
+#### [GitHub](https://github.com/towardsautonomy/ssnet_semseg) 
+
+Pretrained weights can be downloaded [here](https://drive.google.com/open?id=1KG_-paGZmyxnSfPZGEv7uq_vTduXrLr3).
 
 ---
 
@@ -75,7 +77,7 @@ Implementation of SSNet and other helper python scripts can be found [here](http
 
 ---
 
-#### [Camera Based Image Feature Detection and Tracking](/perception/camera_image_feature_tracking)
+#### [Camera Based Image Feature Detection and Tracking](https://github.com/towardsautonomy/TAPL#image-feature-detection-and-tracking)
 ![](/docs/perception/img/matching_points.png)
 
 #### This has been implemented as part of [TAPL](https://www.towardsautonomy.com/tapl/index.html). The pipeline can be explored [here](https://github.com/towardsautonomy/TAPL#image-feature-detection-and-tracking)
