@@ -12,7 +12,7 @@ Building a complete autonomous car or a robotic system requires implementing fol
 
 ---
 
-### [TurtleBot3 Burger Autonomous Navigation in a Hallway](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
+### [TurtleBot3 Burger Autonomous Navigation in a Hallway](https://github.com/towardsautonomy/turtlebot_nav)
 
 ![TurtleBot Autonomous Navigation](/docs/autonomous_systems/img/turtlebot.gif)
 
@@ -22,11 +22,11 @@ TurtleBot3 Burger has found itself in a hallway. We know the walls do not go on 
 
 #### [YouTube Link to the demo video](https://youtu.be/Pg-DAB2tA5c "TurtleBot Autonomous Navigation")
 
-#### The complete implementation details, resources, and source code can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/turtlebot_nav)
+#### [GitHub](https://github.com/towardsautonomy/turtlebot_nav)
 
 ---
 
-### [Self-Driving Car in Udacity Simulator](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/self_driving_car_udacity)
+### [Self-Driving Car in Udacity Simulator](https://github.com/towardsautonomy/self_driving_car_udacity)
 
 ##### [YouTube Link to the demo video](https://youtu.be/aHQQqLsYMUg "Udacity Self-Driving Car")
 
@@ -37,6 +37,8 @@ This project demonstrates core functionality of the autonomous vehicle system, i
 The following is a system architecture diagram showing the ROS nodes and topics used in the project.
 
 ![](/docs/autonomous_systems/img/udacity_sim_project-rosgraph.png)
+
+#### [GitHub](https://github.com/towardsautonomy/self_driving_car_udacity)
 
 Here is the brief description of each major node doing the heavy lifting towards making the autonomous car run smoothly stopping at each red traffic light and completing the 5 mile loop.  
 

@@ -21,7 +21,7 @@ permalink: /perception/lane_detection
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-Python implementation for this project can be found [here](https://github.com/towardsautonomy/towardsautonomy.github.io/tree/master/projects/lane_detection)  
+## [GitHub](https://github.com/towardsautonomy/lane_detection) 
 
 The images for camera calibration are stored in the folder called `camera_cal`.  The images in `test_images` are for testing the pipeline on single frames.  
 

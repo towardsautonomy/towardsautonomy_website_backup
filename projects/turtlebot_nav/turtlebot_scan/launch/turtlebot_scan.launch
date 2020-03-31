@@ -1,6 +1,0 @@
-<launch>
-  <!--
-  <node pkg="turtlebot_scan" type="turtlebot_scan_node" name="turtlebot_scan_node" output="screen"></node>
-  -->
-  <node pkg="turtlebot_scan" type="turtlebot_scan_node" name="turtlebot_scan_node"></node>
-</launch>

@@ -1,3 +1,0 @@
-<launch>
-  <node pkg="turtlebot_pose" type="turtlebot_pose_node" name="turtlebot_pose_node"></node>
-</launch>
