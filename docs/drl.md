@@ -89,6 +89,6 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
     3 - turn right.
 ```
 
-## [GitHub](https://github.com/towardsautonomy/moon_landing_gym_dqn)  
+## [GitHub](https://github.com/towardsautonomy/unity_mlagents_banana_navigator)  
 
-### For more details and implementation, visit the [GitHub](https://github.com/towardsautonomy/moon_landing_gym_dqn) page.
+### For more details and implementation, visit the [GitHub](https://github.com/towardsautonomy/unity_mlagents_banana_navigator) page.
