@@ -2,7 +2,9 @@
 permalink: /drl
 ---
 
-# Deep Reinforcement Learning <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
+<a href="../../index.html"><img style="float: left;" src="/img/back_button.png" height="25" width="25">
+
+# Deep Reinforcement Learning
 
 ###### Author: *[Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)*  
 

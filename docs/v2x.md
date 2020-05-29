@@ -2,7 +2,9 @@
 permalink: /v2x
 ---
 
-# V2X (Vehicle-To-Everything) <a href="../../index.html"><img style="float: right;" src="/img/logo_circle.png" height="100" width="100">
+<a href="../../index.html"><img style="float: left;" src="/img/back_button.png" height="25" width="25">
+
+# V2X (Vehicle-To-Everything) 
 
 ###### Author: *[Shubham Shrivastava](http://www.towardsautonomy.com/#shubham)*  
 **Cite this as:**  Shrivastava, Shubham. (2019). V2V Vehicle Safety Communication: Intelligent Transportation Systems. 10.1007/978-3-319-94785-3_5.   
