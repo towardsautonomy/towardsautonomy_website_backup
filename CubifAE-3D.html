@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>CubifAE-3D</title>
+
+        <!-- HTML Meta Tags -->
+        <meta name="description" content="Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection">
+        <meta name="keywords" content="Monocular 3D Object Detection, 3D Object Detection, Object Detection, Machine Learning">
+        <meta name="author" content="Shubham Shrivastava">
+
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="CubifAE-3D">
+        <meta itemprop="description" content="Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection">
+        <meta itemprop="image" content="project/cubifae_3d/intro_kitti.png">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://www.towardsautonomy.com/CubifAE-3D">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="CubifAE-3D">
+        <meta property="og:description" content="Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection">
+        <meta property="og:image" content="project/cubifae_3d/intro_kitti.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="CubifAE-3D">
+        <meta name="twitter:description" content="Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection">
+        <meta name="twitter:image" content="project/cubifae_3d/intro_kitti.png">
+
+        <!-- Bootstrap Core CSS -->
+         <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-social.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet" />
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    </head>
+<body>
+
+<style type="text/css" media="all">
+    IMG {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: middle;
+        PADDING-BOTTOM: 0px;
+        PADDING-TOP: 0px
+    }
+    #primarycontent {
+        MARGIN-LEFT: auto; ; WIDTH: expression(document.body.clientWidth >
+    1000? "1000px": "auto" ); MARGIN-RIGHT: auto; TEXT-ALIGN: center; max-width:
+    1000px }
+    BODY {
+        TEXT-ALIGN: center
+    }
+</style>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
+<!-- Page Content -->
+<!-- Marketing Icons Section -->
+<div id="primarycontent" class="row">
+    <br><br>
+		<h1 class="text-center"><b>CubifAE-3D: Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection</b></h1><br>
+        <h3 class="text-center"><i> <a href="https://www.linkedin.com/in/shubshrivastava/">Shubham Shrivastava</a> and 
+            <a href="https://www.linkedin.com/in/punarjay-chakravarty/">Punarjay Chakravarty</a></i></h3>
+        <h5 class="text-center"> Ford Greenfield Labs, Palo Alto </h5>
+        
+        <div class="row">
+            <table align=center width=320px>
+                <tr>
+                <td align=center width=50px>
+                <center>
+                    <span style="font-size:16px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]</a></span>
+                </center>
+                </td>
+                <td align=center width=50px>
+                <center>
+                    <span style="font-size:16px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]</a></span>
+                </center>
+                </td>
+            </table>
+        </div>
+
+        
+</div>
+
+<div class="row">
+    <br>
+	<table align=center width=100px>
+		<tr>
+		<td align=center width=50px>
+		<center>
+            <span style="font-size:24px"><a href='https://arxiv.org/pdf/2006.04080'>
+                <img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="projects/cubifae_3d/thumbnail.png" width=170>
+            </a></span>
+		</center>
+		</td>
+		<td align=left width=50px>
+        <span style="font-size:24px">Paper</span>
+        <p style="font-family:serif;color:gray;width:80%;text-align:left">
+            <strong><a href='https://arxiv.org/pdf/2006.04080'>arXiv:2006.04080</a></strong></p>
+		</td>
+	</table>
+</div>
+
+
+<div style="font-family: Monospace;" class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+    </b><h2 class="text-center">Abstract</h2>
+    We introduce a method for 3D object detection using a single monocular image. 
+    Depth data is used to pre-train an RGB-to-Depth Auto-Encoder (AE). 
+    The embedding learnt from this AE is then used to train a 3D Object Detector (3DOD) CNN 
+    which is used to regress the parameters of 3D object poses after the encoder from the AE 
+    generates a latent embedding from the RGB image. We show that we can pre-train the AE using 
+    paired RGB and depth images from simulation data once and subsequently only train the 
+    3DOD network using real data, comprising of RGB images and 3D object pose labels 
+    (without the requirement of dense depth). Our 3DOD network utilizes a particular <i>cubification</i> 
+    of 3D space around the camera, where each cuboid is tasked with predicting N object poses, 
+    along with their class and confidence values. The AE pre-training and this method of dividing 
+    the 3D space around the camera into cuboids give our method its name - CubifAE-3D. 
+    We demonstrate results for monocular 3D object detection on the Virtual KITTI 2, KITTI, 
+    and nuScenes datasets for Autnomous Vehicle (AV) perception.
+    <br>
+</div>
+
+<!-- <div>
+    <img src="projects/cubifae_3d/cubifae_3d_qual_results.png" alt="logo" height="40%" width="40%    " />
+</div> -->
+
+<!-- <div>
+    <img class="img" src="projects/cubifae_3d/demo.gif" 
+                alt="CubifAE-3D Teaser"/>
+</div> -->
+
+<div class="row">
+	<div class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+	<!-- <h2 class="page-header">Teaser</h2> -->
+		<div class="embed-responsive embed-responsive-16by9">
+            <div>
+                <br>
+                <img src="projects/cubifae_3d/demo.gif" alt="teaser" width="100%" />
+            </div>
+	       </div>
+	</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">How does it work?</h2>
+
+<br/>
+    <p>Our method of performing 3D object detection relies on first learning the latent space embeddings for per-pixel RGB-to-depth predictions 
+        in an image. This is achieved by training an auto-encoder to predict the dense depth map from a single RGB image. Once trained, 
+        the decoder is detached, and the latent space embedding is fed to our 3DOD network.
+    </p>
+
+    <p>By training the auto-encoder first, we force its latent space to learn a compact RGB-to-depth embedding representation 
+        which is encoded in the latent space. A model which then operates on these encodings is thus able to formulate a relationship 
+        between the structures present in the RGB image and its real world depth. We then <i>cubify</i> the monocular camera space 
+        and train our 3DOD model to detect object poses. So, at the test time, only an RGB image is needed for detecting object poses.
+        An additional <i>classifier</i> network with a small number of parameters is then used to classify all of these detected objects 
+        at once by resizing and stacking the object crops and feeding them to the <i>classifier</i> model. This is done instead of p
+        redicting the classes directly as a part of the vector corresponding to each object from the 3DOD network in the favour of 
+        reducing number of parameters in the fully-connected layers and hence the inference time. We apply <i>non-max suppression</i> 
+        to further filter out the object pose predictions with high <i>IoU</i> by retaining only the objects with the highest <i>confidence</i>.
+    </p>
+
+    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="projects/cubifae_3d/detailed_model_architecture_w_classifier.png" alt="CubifAE-3D"/>
+    <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+        Detailed model architecture of <b>CubifAE-3D</b>. The RGB-to-depth auto-encoder (top branch) is first trained 
+        in a supervised way with a combination of MSE and Edge-Aware Smoothing Loss. Once trained, 
+        the decoder is detached, encoder weights are frozen, and the encoder output is fed to the 3DOD model (middle branch), 
+        which is trained to regress the parameters of object poses. A 2D bounding-box is obtained for each object 
+        by projecting its detected 3D bounding-box onto the camera image plane, cropped, and resized to 64x64 and 
+        fed to the classifier model (bottom branch) along with the normalized whl vector for class prediction. 
+        The dimensions indicated correspond to the output tensor for each block.</i></p>
+    </div>
+
+    <p><br>
+        We prepare training labels for the 3DOD network in a way that allows each part of the network to only be responsible for 
+        detecting objects within a certain physical space relative to the ego-vehicle camera. We <i>cubify</i> the 3D region-of-interest (ROI) 
+        of the ego-camera into a 3-dimensional grid. This 3D grid is of size 4xM, where the camera image plane is divided into 4 regions 
+        along the (x,y) dimensions of the camera coordinate frame, with z axis further quantified into M cuboids for each of these 4 regions.
+        Each cuboid in this 4xM grid is responsible for predicting up to N objects in an increasing order of z (depth) from the 
+        center of the ego-camera.
+    </p>
+
+    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="projects/cubifae_3d/camera_world.png" alt="CubifAE-3D"/>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+            <i>Cubification</i> of the camera space: The perception region of interest is divided into a 4x4xM grid (4x4 in the x and y directions 
+            aligned with the camera image plane, where each grid has stacked on it, M cuboids in the z direction). Each cuboid is responsible 
+            for predicting up to N object poses. The object coordinates and dimensions are then normalized between 0 and 1 in accordance with a 
+            prior that is computed from data statistics.</i></p>
+        </div>
+
+</div> </div>
+
+<div class="row">
+    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+        <br><br>
+        <h2 class="page-header">Results on KITTI dataset</h2>
+        <!-- Photo Grid -->
+        <div class="row"> 
+            <div class="column">
+                <img src="projects/cubifae_3d/kitti/frame_00027.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00054.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00057.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00071.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00084.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00089.png" style="width:90%">
+            </div>
+            <div class="column">
+                <img src="projects/cubifae_3d/kitti/frame_00232.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00281.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00312.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_00994.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_05882.png" style="width:90%">
+                <img src="projects/cubifae_3d/kitti/frame_01217.png" style="width:90%">
+            </div>
+        </div>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+            Qualitative results on the KITTI dataset. The top part of each image shows a bounding box obtained 
+            as a 2D projection of their 3D poses (red: car, yellow: truck, green: van, blue: pedestrian, cyan: tram, cyclist, and others). 
+            The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle positioned at the center 
+            of red circle drawn on the left; pointing towards the right of the image. 
+        </i></p>
+    </div>
+</div>
+
+<div class="row">
+    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+        <br><br>
+        <h2 class="page-header">Results on nuScenes dataset</h2>
+        <!-- Photo Grid -->
+        <div class="row"> 
+            <div class="column">
+                <img src="projects/cubifae_3d/nuscenes/frame_00004.png" style="width:90%">
+                <img src="projects/cubifae_3d/nuscenes/frame_00107.png" style="width:90%">
+                <img src="projects/cubifae_3d/nuscenes/frame_00142.png" style="width:90%">
+                <img src="projects/cubifae_3d/nuscenes/frame_00178.png" style="width:90%">
+            </div>
+            <div class="column">
+                <img src="projects/cubifae_3d/nuscenes/frame_00200.png" style="width:90%">
+                <img src="projects/cubifae_3d/nuscenes/frame_00253.png" style="width:90%">
+                <img src="projects/cubifae_3d/nuscenes/frame_00284.png" style="width:90%">
+                <img src="projects/cubifae_3d/nuscenes/frame_00332.png" style="width:90%">
+            </div>
+        </div>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+            Qualitative results on the nuScenes dataset across various scenes and lighting conditions. 
+            The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
+            (red: car, yellow: truck, green: motorcycle, blue: pedestrian, cyan: bus, bicycle, and others). 
+            The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle 
+            positioned at the center of red circle drawn on the left; pointing towards the right of the image. 
+        </i></p>
+    </div>
+</div>
+
+<div class="row">
+    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+        <br><br>
+        <h2 class="page-header">Results on Virtual KITTI 2 dataset</h2>
+        <!-- Photo Grid -->
+        <div class="row"> 
+            <div class="column">
+                <img src="projects/cubifae_3d/vkitti/frame_00002.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00005.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00011.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00014.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00024.png" style="width:90%">
+            </div>
+            <div class="column">
+                <img src="projects/cubifae_3d/vkitti/frame_00026.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00031.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00066.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00067.png" style="width:90%">
+                <img src="projects/cubifae_3d/vkitti/frame_00099.png" style="width:90%">
+            </div>
+        </div>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+            Qualitative results on the Virtual KITTI 2 dataset across various scenes, weather, and lighting conditions. 
+            The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
+            (red: car, yellow: truck, cyan: van). The bottom part (black background) shows a birds-eye view of the object poses 
+            with the ego-vehicle positioned at the center of red circle drawn on the left; pointing towards the right of the image. 
+        </i></p>
+    </div>
+</div>
+
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+    <br>
+    <h2 class="page-header">Discussion and Future Work</h2>
+
+    <p>
+        CubifAE-3D leverages the power of simulation to learn an embedding for RGB-to-depth, 
+        which is then used to train a network to predict object poses from RGB images on real datasets. 
+        We find that our method does surprisingly well on objects that are far from the ego-vehicle and 
+        is represented by only a few pixels, as is evident from our results on the KITTI <i>moderate</i> and 
+        <i>hard</i> difficulty levels. Additionally, with the <i>cubification</i> technique, we are able to 
+        localize the position error to within each <i>cuboid</i> so that it does not increase with increasing 
+        distance from the ego-camera. This encourages us to believe that with further quantification of the 3D space, 
+        we will be able to achieve higher accuracy and this will be explored in our future work. A non-uniform or a coarse-to-fine 
+        <i>cubification</i> technique is also something of interest to fill the gap between short-range and 
+        long-range performance and reduce errors at cuboid boundaries. Furthermore, we would like to perform <i>projective data augmentation</i> 
+        in order to virtually zoom and move the camera through space to increase the amount of labelled 3D pose training data so that the 
+        3DOD network can generalize better on real datasets. 
+    </p>
+
+    <p>
+        The techniques presented in this paper: pre-training an RGB-to-depth embedding from simulation and <i>cubifying</i> 3D space are 
+        also likely to be useful for other AV perception tasks that are dependent on pixel-level depth embeddings, without the need for 
+        a ground-truth dense depth map, like free space/occupancy grid estimation or 6 DoF monocular localization of the ego-camera/AV.
+    </p>
+
+    <p>
+        We show that our method already outperforms some state-of-the-art methods for monocular 3D object detection 
+        and we are hopeful that our continuing improvements to <b><i>CubifAE-3D</i></b> will serve as a baseline for monocular 3D object detection.
+    </p>
+</div>
+
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+    <br>
+    <h2 class="page-header">Conclusions</h2>
+
+    <p>
+    3D object detection is a primary task in the perception pipeline for an AV and we present CubifAE-3D, 
+    a method for doing this using monocular imagery. Our method utilizes dense depth information corresponding 
+    to RGB images from Gaming Engine based simulators and this is used to pre-train a RGB-to-depth auto-encoder (AE). 
+    The encoder of this pre-trained AE is then detached and used as an embedder for RGB images. This embedding is 
+    subsequently used to train our 3D Object Detector (3DOD), which is trained in a fully supervised manner and requires 
+    RGB images and corresponding 3D object pose annotations. Our 3DOD <i>cubifies</i> the 3D space around the camera 
+    into a set of cuboid grids, where each cuboid in the grid is trained to output N 3D object poses and their confidence scores. 
+    Once trained, our aggregate detector <b><i>CubifAE-3D</i></b> (comprising of the AE-encoder and the 3DOD) is able to generate 
+    accurate 3D object poses from RGB images. The particular scheme of <i>cubification</i> of the 3D space gives results 
+    whose accuracy is maintained with distance from the camera. We believe that <b><i>CubifAE-3D</i></b> represents an important 
+    advancement in the field, for fast, accurate 3D object detection from monocular images. The ability to do this robustly 
+    and accurately from cheap cameras (instead of expensive LIDAR) that are already present in a surround-view configuration 
+    in present generation commercial vehicles will be crucial in the development and democratization of AV technology.
+    </p>
+</div>
+
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br>
+<h2>Citation</h2>
+
+<pre>
+@misc{shrivastava2020cubifae3d,
+    title={CubifAE-3D: Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection},
+    author={Shubham Shrivastava and Punarjay Chakravarty},
+    year={2020},
+    eprint={2006.04080},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+</pre>																
+</div>
+
+</body>
+</html>
