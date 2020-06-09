@@ -28,13 +28,13 @@
         <meta name="twitter:image" content="project/cubifae_3d/intro_kitti.png">
 
         <!-- Bootstrap Core CSS -->
-         <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/bootstrap-social.css" rel="stylesheet" />
-        <link href="css/custom.css" rel="stylesheet" />
+         <link href="../css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../css/bootstrap-social.css" rel="stylesheet" />
+        <link href="../css/custom.css" rel="stylesheet" />
         <!-- Custom CSS -->
-        <link href="css/modern-business.css" rel="stylesheet" />
+        <link href="../css/modern-business.css" rel="stylesheet" />
         <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="font-awesome/../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -117,7 +117,7 @@
 		<td align=center width=50px>
 		<center>
             <span style="font-size:24px"><a href='https://arxiv.org/pdf/2006.04080'>
-                <img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="projects/cubifae_3d/thumbnail.png" width=170>
+                <img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="resources/thumbnail.png" width=170>
             </a></span>
 		</center>
 		</td>
@@ -149,11 +149,11 @@
 </div>
 
 <!-- <div>
-    <img src="projects/cubifae_3d/cubifae_3d_qual_results.png" alt="logo" height="40%" width="40%    " />
+    <img src="resources/cubifae_3d_qual_results.png" alt="logo" height="40%" width="40%    " />
 </div> -->
 
 <!-- <div>
-    <img class="img" src="projects/cubifae_3d/demo.gif" 
+    <img class="img" src="resources/demo.gif" 
                 alt="CubifAE-3D Teaser"/>
 </div> -->
 
@@ -163,7 +163,7 @@
 		<div class="embed-responsive embed-responsive-16by9">
             <div>
                 <br>
-                <img src="projects/cubifae_3d/demo.gif" alt="teaser" width="100%" />
+                <img src="resources/demo.gif" alt="teaser" width="100%" />
             </div>
 	       </div>
 	</div>
@@ -192,7 +192,7 @@
         to further filter out the object pose predictions with high <i>IoU</i> by retaining only the objects with the highest <i>confidence</i>.
     </p>
 
-    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="projects/cubifae_3d/detailed_model_architecture_w_classifier.png" alt="CubifAE-3D"/>
+    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="resources/detailed_model_architecture_w_classifier.png" alt="CubifAE-3D"/>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
         Detailed model architecture of <b>CubifAE-3D</b>. The RGB-to-depth auto-encoder (top branch) is first trained 
         in a supervised way with a combination of MSE and Edge-Aware Smoothing Loss. Once trained, 
@@ -212,7 +212,7 @@
         center of the ego-camera.
     </p>
 
-    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="projects/cubifae_3d/camera_world.png" alt="CubifAE-3D"/>
+    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="resources/camera_world.png" alt="CubifAE-3D"/>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
             <i>Cubification</i> of the camera space: The perception region of interest is divided into a 4x4xM grid (4x4 in the x and y directions 
             aligned with the camera image plane, where each grid has stacked on it, M cuboids in the z direction). Each cuboid is responsible 
@@ -229,20 +229,20 @@
         <!-- Photo Grid -->
         <div class="row"> 
             <div class="column">
-                <img src="projects/cubifae_3d/kitti/frame_00027.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00054.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00057.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00071.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00084.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00089.png" style="width:90%">
+                <img src="resources/kitti/frame_00027.png" style="width:90%">
+                <img src="resources/kitti/frame_00054.png" style="width:90%">
+                <img src="resources/kitti/frame_00057.png" style="width:90%">
+                <img src="resources/kitti/frame_00071.png" style="width:90%">
+                <img src="resources/kitti/frame_00084.png" style="width:90%">
+                <img src="resources/kitti/frame_00089.png" style="width:90%">
             </div>
             <div class="column">
-                <img src="projects/cubifae_3d/kitti/frame_00232.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00281.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00312.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_00994.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_05882.png" style="width:90%">
-                <img src="projects/cubifae_3d/kitti/frame_01217.png" style="width:90%">
+                <img src="resources/kitti/frame_00232.png" style="width:90%">
+                <img src="resources/kitti/frame_00281.png" style="width:90%">
+                <img src="resources/kitti/frame_00312.png" style="width:90%">
+                <img src="resources/kitti/frame_00994.png" style="width:90%">
+                <img src="resources/kitti/frame_05882.png" style="width:90%">
+                <img src="resources/kitti/frame_01217.png" style="width:90%">
             </div>
         </div>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
@@ -261,16 +261,16 @@
         <!-- Photo Grid -->
         <div class="row"> 
             <div class="column">
-                <img src="projects/cubifae_3d/nuscenes/frame_00004.png" style="width:90%">
-                <img src="projects/cubifae_3d/nuscenes/frame_00107.png" style="width:90%">
-                <img src="projects/cubifae_3d/nuscenes/frame_00142.png" style="width:90%">
-                <img src="projects/cubifae_3d/nuscenes/frame_00178.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00004.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00107.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00142.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00178.png" style="width:90%">
             </div>
             <div class="column">
-                <img src="projects/cubifae_3d/nuscenes/frame_00200.png" style="width:90%">
-                <img src="projects/cubifae_3d/nuscenes/frame_00253.png" style="width:90%">
-                <img src="projects/cubifae_3d/nuscenes/frame_00284.png" style="width:90%">
-                <img src="projects/cubifae_3d/nuscenes/frame_00332.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00200.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00253.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00284.png" style="width:90%">
+                <img src="resources/nuscenes/frame_00332.png" style="width:90%">
             </div>
         </div>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
@@ -290,18 +290,18 @@
         <!-- Photo Grid -->
         <div class="row"> 
             <div class="column">
-                <img src="projects/cubifae_3d/vkitti/frame_00002.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00005.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00011.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00014.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00024.png" style="width:90%">
+                <img src="resources/vkitti/frame_00002.png" style="width:90%">
+                <img src="resources/vkitti/frame_00005.png" style="width:90%">
+                <img src="resources/vkitti/frame_00011.png" style="width:90%">
+                <img src="resources/vkitti/frame_00014.png" style="width:90%">
+                <img src="resources/vkitti/frame_00024.png" style="width:90%">
             </div>
             <div class="column">
-                <img src="projects/cubifae_3d/vkitti/frame_00026.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00031.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00066.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00067.png" style="width:90%">
-                <img src="projects/cubifae_3d/vkitti/frame_00099.png" style="width:90%">
+                <img src="resources/vkitti/frame_00026.png" style="width:90%">
+                <img src="resources/vkitti/frame_00031.png" style="width:90%">
+                <img src="resources/vkitti/frame_00066.png" style="width:90%">
+                <img src="resources/vkitti/frame_00067.png" style="width:90%">
+                <img src="resources/vkitti/frame_00099.png" style="width:90%">
             </div>
         </div>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>

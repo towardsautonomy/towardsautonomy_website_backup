@@ -13,6 +13,18 @@ permalink: /perception
 
 ---
 
+### [CubifAE-3D: Monocular Camera Space Cubification on Autonomous Vehicles for Auto-Encoder based 3D Object Detection](https://www.towardsautonomy.com/CubifAE-3D/)
+
+Authors: [Shubham Shrivastava](https://www.linkedin.com/in/shubshrivastava/) and [Punarjay Chakravarty](https://www.linkedin.com/in/punarjay-chakravarty/)
+
+#### Abstract
+
+We introduce a method for 3D object detection using a single monocular image. Depth data is used to pre-train an RGB-to-Depth Auto-Encoder (AE). The embedding learnt from this AE is then used to train a 3D Object Detector (3DOD) CNN which is used to regress the parameters of 3D object poses after the encoder from the AE generates a latent embedding from the RGB image. We show that we can pre-train the AE using paired RGB and depth images from simulation data once and subsequently only train the 3DOD network using real data, comprising of RGB images and 3D object pose labels (without the requirement of dense depth). Our 3DOD network utilizes a particular <i>cubification</i> of 3D space around the camera, where each cuboid is tasked with predicting N object poses, along with their class and confidence values. The AE pre-training and this method of dividing the 3D space around the camera into cuboids give our method its name - CubifAE-3D. We demonstrate results for monocular 3D object detection on the Virtual KITTI 2, KITTI, and nuScenes datasets for Autnomous Vehicle (AV) perception.  
+
+![](/CubifAE-3D/resources/demo.gif)
+
+---
+
 ### [DAC-DC : Divide and Concquer for Detection and Classification](https://github.com/towardsautonomy/DAC-DC)
 
 ![](/docs/perception/img/dac-dc.gif)
