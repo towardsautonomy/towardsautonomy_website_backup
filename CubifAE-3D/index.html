@@ -314,58 +314,6 @@
 </div>
 
 <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br>
-    <h2 class="page-header">Discussion and Future Work</h2>
-
-    <p>
-        CubifAE-3D leverages the power of simulation to learn an embedding for RGB-to-depth, 
-        which is then used to train a network to predict object poses from RGB images on real datasets. 
-        We find that our method does surprisingly well on objects that are far from the ego-vehicle and 
-        is represented by only a few pixels, as is evident from our results on the KITTI <i>moderate</i> and 
-        <i>hard</i> difficulty levels. Additionally, with the <i>cubification</i> technique, we are able to 
-        localize the position error to within each <i>cuboid</i> so that it does not increase with increasing 
-        distance from the ego-camera. This encourages us to believe that with further quantification of the 3D space, 
-        we will be able to achieve higher accuracy and this will be explored in our future work. A non-uniform or a coarse-to-fine 
-        <i>cubification</i> technique is also something of interest to fill the gap between short-range and 
-        long-range performance and reduce errors at cuboid boundaries. Furthermore, we would like to perform <i>projective data augmentation</i> 
-        in order to virtually zoom and move the camera through space to increase the amount of labelled 3D pose training data so that the 
-        3DOD network can generalize better on real datasets. 
-    </p>
-
-    <p>
-        The techniques presented in this paper: pre-training an RGB-to-depth embedding from simulation and <i>cubifying</i> 3D space are 
-        also likely to be useful for other AV perception tasks that are dependent on pixel-level depth embeddings, without the need for 
-        a ground-truth dense depth map, like free space/occupancy grid estimation or 6 DoF monocular localization of the ego-camera/AV.
-    </p>
-
-    <p>
-        We show that our method already outperforms some state-of-the-art methods for monocular 3D object detection 
-        and we are hopeful that our continuing improvements to <b><i>CubifAE-3D</i></b> will serve as a baseline for monocular 3D object detection.
-    </p>
-</div>
-
-<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br>
-    <h2 class="page-header">Conclusions</h2>
-
-    <p>
-    3D object detection is a primary task in the perception pipeline for an AV and we present CubifAE-3D, 
-    a method for doing this using monocular imagery. Our method utilizes dense depth information corresponding 
-    to RGB images from Gaming Engine based simulators and this is used to pre-train a RGB-to-depth auto-encoder (AE). 
-    The encoder of this pre-trained AE is then detached and used as an embedder for RGB images. This embedding is 
-    subsequently used to train our 3D Object Detector (3DOD), which is trained in a fully supervised manner and requires 
-    RGB images and corresponding 3D object pose annotations. Our 3DOD <i>cubifies</i> the 3D space around the camera 
-    into a set of cuboid grids, where each cuboid in the grid is trained to output N 3D object poses and their confidence scores. 
-    Once trained, our aggregate detector <b><i>CubifAE-3D</i></b> (comprising of the AE-encoder and the 3DOD) is able to generate 
-    accurate 3D object poses from RGB images. The particular scheme of <i>cubification</i> of the 3D space gives results 
-    whose accuracy is maintained with distance from the camera. We believe that <b><i>CubifAE-3D</i></b> represents an important 
-    advancement in the field, for fast, accurate 3D object detection from monocular images. The ability to do this robustly 
-    and accurately from cheap cameras (instead of expensive LIDAR) that are already present in a surround-view configuration 
-    in present generation commercial vehicles will be crucial in the development and democratization of AV technology.
-    </p>
-</div>
-
-<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
 <br>
 <h2>Citation</h2>
 
