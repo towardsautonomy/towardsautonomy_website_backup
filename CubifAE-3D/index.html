@@ -110,7 +110,7 @@ body {
                 <tr>
                 <td align=center width=50px>
                 <center>
-                    <span style="font-size:20px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]</a></span>
+                    <span style="font-size:20px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]&nbsp&nbsp</a></span>
                 </center>
                 </td>
                 <td align=center width=50px>
@@ -167,26 +167,20 @@ body {
 </div> -->
 
 <!-- <div>
-    <img class="img" src="resources/demo.gif" 
+    <img class="img" width=100% src="resources/demo.gif" 
                 alt="CubifAE-3D Teaser"/>
 </div> -->
 
-<div class="row">
-	<div class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
-	<!-- <h2 class="page-header">Teaser</h2> -->
-		<div class="embed-responsive embed-responsive-16by9">
-            <div>
-                <br>
-                <img src="resources/demo.gif" alt="teaser" width="100%" />
-            </div>
-	       </div>
-	</div>
+<div class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+<!-- <h2 class="page-header">Teaser</h2> -->
+    <div class="embed-responsive embed-responsive-16by9">
+        <div>
+            <img src="resources/demo.gif" alt="teaser" width="90%" />
+        </div>
+    </div>
 </div>
 
-
-<div class="row">
-<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-<br><br>
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify"> 
 <h2 class="page-header">How does it work?</h2>
 
 <br/>
@@ -207,7 +201,7 @@ body {
     </p>
 
     <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="resources/detailed_model_architecture_w_classifier.png" alt="CubifAE-3D"/>
-    <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+    <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:90%;text-align:center"><i>
         Detailed model architecture of <b>CubifAE-3D</b>. The RGB-to-depth auto-encoder (top branch) is first trained 
         in a supervised way with a combination of MSE and Edge-Aware Smoothing Loss. Once trained, 
         the decoder is detached, encoder weights are frozen, and the encoder output is fed to the 3DOD model (middle branch), 
@@ -234,97 +228,91 @@ body {
             prior that is computed from data statistics.</i></p>
         </div>
 
-</div> </div>
-
-<div class="row">
-    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
-        <br><br>
-        <h2 class="page-header">Results on KITTI dataset</h2>
-        <!-- Photo Grid -->
-        <div class="row"> 
-            <div class="column">
-                <img src="resources/kitti/frame_00027.png" style="width:90%">
-                <img src="resources/kitti/frame_00054.png" style="width:90%">
-                <img src="resources/kitti/frame_00057.png" style="width:90%">
-                <img src="resources/kitti/frame_00071.png" style="width:90%">
-                <img src="resources/kitti/frame_00084.png" style="width:90%">
-                <img src="resources/kitti/frame_00089.png" style="width:90%">
-            </div>
-            <div class="column">
-                <img src="resources/kitti/frame_00232.png" style="width:90%">
-                <img src="resources/kitti/frame_00281.png" style="width:90%">
-                <img src="resources/kitti/frame_00312.png" style="width:90%">
-                <img src="resources/kitti/frame_00994.png" style="width:90%">
-                <img src="resources/kitti/frame_05882.png" style="width:90%">
-                <img src="resources/kitti/frame_01217.png" style="width:90%">
-            </div>
-        </div>
-        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-            Qualitative results on the KITTI dataset. The top part of each image shows a bounding box obtained 
-            as a 2D projection of their 3D poses (red: car, yellow: truck, green: van, blue: pedestrian, cyan: tram, cyclist, and others). 
-            The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle positioned at the center 
-            of red circle drawn on the left; pointing towards the right of the image. 
-        </i></p>
-    </div>
 </div>
 
-<div class="row">
-    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
-        <br><br>
-        <h2 class="page-header">Results on nuScenes dataset</h2>
-        <!-- Photo Grid -->
-        <div class="row"> 
-            <div class="column">
-                <img src="resources/nuscenes/frame_00004.png" style="width:90%">
-                <img src="resources/nuscenes/frame_00107.png" style="width:90%">
-                <img src="resources/nuscenes/frame_00142.png" style="width:90%">
-                <img src="resources/nuscenes/frame_00178.png" style="width:90%">
-            </div>
-            <div class="column">
-                <img src="resources/nuscenes/frame_00200.png" style="width:90%">
-                <img src="resources/nuscenes/frame_00253.png" style="width:90%">
-                <img src="resources/nuscenes/frame_00284.png" style="width:90%">
-                <img src="resources/nuscenes/frame_00332.png" style="width:90%">
-            </div>
+<div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+    <br><br>
+    <h2 class="page-header">Results on KITTI dataset</h2>
+    <!-- Photo Grid -->
+    <div class="row"> 
+        <div class="column">
+            <img src="resources/kitti/frame_00027.png" style="width:90%">
+            <img src="resources/kitti/frame_00054.png" style="width:90%">
+            <img src="resources/kitti/frame_00057.png" style="width:90%">
+            <img src="resources/kitti/frame_00071.png" style="width:90%">
+            <img src="resources/kitti/frame_00084.png" style="width:90%">
+            <img src="resources/kitti/frame_00089.png" style="width:90%">
         </div>
-        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-            Qualitative results on the nuScenes dataset across various scenes and lighting conditions. 
-            The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
-            (red: car, yellow: truck, green: motorcycle, blue: pedestrian, cyan: bus, bicycle, and others). 
-            The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle 
-            positioned at the center of red circle drawn on the left; pointing towards the right of the image. 
-        </i></p>
+        <div class="column">
+            <img src="resources/kitti/frame_00232.png" style="width:90%">
+            <img src="resources/kitti/frame_00281.png" style="width:90%">
+            <img src="resources/kitti/frame_00312.png" style="width:90%">
+            <img src="resources/kitti/frame_00994.png" style="width:90%">
+            <img src="resources/kitti/frame_05882.png" style="width:90%">
+            <img src="resources/kitti/frame_01217.png" style="width:90%">
+        </div>
     </div>
+    <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+        Qualitative results on the KITTI dataset. The top part of each image shows a bounding box obtained 
+        as a 2D projection of their 3D poses (red: car, yellow: truck, green: van, blue: pedestrian, cyan: tram, cyclist, and others). 
+        The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle positioned at the center 
+        of red circle drawn on the left; pointing towards the right of the image. 
+    </i></p>
 </div>
 
-<div class="row">
-    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
-        <br><br>
-        <h2 class="page-header">Results on Virtual KITTI 2 dataset</h2>
-        <!-- Photo Grid -->
-        <div class="row"> 
-            <div class="column">
-                <img src="resources/vkitti/frame_00002.png" style="width:90%">
-                <img src="resources/vkitti/frame_00005.png" style="width:90%">
-                <img src="resources/vkitti/frame_00011.png" style="width:90%">
-                <img src="resources/vkitti/frame_00014.png" style="width:90%">
-                <img src="resources/vkitti/frame_00024.png" style="width:90%">
-            </div>
-            <div class="column">
-                <img src="resources/vkitti/frame_00026.png" style="width:90%">
-                <img src="resources/vkitti/frame_00031.png" style="width:90%">
-                <img src="resources/vkitti/frame_00066.png" style="width:90%">
-                <img src="resources/vkitti/frame_00067.png" style="width:90%">
-                <img src="resources/vkitti/frame_00099.png" style="width:90%">
-            </div>
+<div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+    <br><br>
+    <h2 class="page-header">Results on nuScenes dataset</h2>
+    <!-- Photo Grid -->
+    <div class="row"> 
+        <div class="column">
+            <img src="resources/nuscenes/frame_00004.png" style="width:90%">
+            <img src="resources/nuscenes/frame_00107.png" style="width:90%">
+            <img src="resources/nuscenes/frame_00142.png" style="width:90%">
+            <img src="resources/nuscenes/frame_00178.png" style="width:90%">
         </div>
-        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-            Qualitative results on the Virtual KITTI 2 dataset across various scenes, weather, and lighting conditions. 
-            The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
-            (red: car, yellow: truck, cyan: van). The bottom part (black background) shows a birds-eye view of the object poses 
-            with the ego-vehicle positioned at the center of red circle drawn on the left; pointing towards the right of the image. 
-        </i></p>
+        <div class="column">
+            <img src="resources/nuscenes/frame_00200.png" style="width:90%">
+            <img src="resources/nuscenes/frame_00253.png" style="width:90%">
+            <img src="resources/nuscenes/frame_00284.png" style="width:90%">
+            <img src="resources/nuscenes/frame_00332.png" style="width:90%">
+        </div>
     </div>
+    <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+        Qualitative results on the nuScenes dataset across various scenes and lighting conditions. 
+        The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
+        (red: car, yellow: truck, green: motorcycle, blue: pedestrian, cyan: bus, bicycle, and others). 
+        The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle 
+        positioned at the center of red circle drawn on the left; pointing towards the right of the image. 
+    </i></p>
+</div>
+
+<div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+    <br><br>
+    <h2 class="page-header">Results on Virtual KITTI 2 dataset</h2>
+    <!-- Photo Grid -->
+    <div class="row"> 
+        <div class="column">
+            <img src="resources/vkitti/frame_00002.png" style="width:90%">
+            <img src="resources/vkitti/frame_00005.png" style="width:90%">
+            <img src="resources/vkitti/frame_00011.png" style="width:90%">
+            <img src="resources/vkitti/frame_00014.png" style="width:90%">
+            <img src="resources/vkitti/frame_00024.png" style="width:90%">
+        </div>
+        <div class="column">
+            <img src="resources/vkitti/frame_00026.png" style="width:90%">
+            <img src="resources/vkitti/frame_00031.png" style="width:90%">
+            <img src="resources/vkitti/frame_00066.png" style="width:90%">
+            <img src="resources/vkitti/frame_00067.png" style="width:90%">
+            <img src="resources/vkitti/frame_00099.png" style="width:90%">
+        </div>
+    </div>
+    <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+        Qualitative results on the Virtual KITTI 2 dataset across various scenes, weather, and lighting conditions. 
+        The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
+        (red: car, yellow: truck, cyan: van). The bottom part (black background) shows a birds-eye view of the object poses 
+        with the ego-vehicle positioned at the center of red circle drawn on the left; pointing towards the right of the image. 
+    </i></p>
 </div>
 
 <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">

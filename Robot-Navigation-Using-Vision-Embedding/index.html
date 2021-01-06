@@ -132,12 +132,12 @@ body {
                 <tr>
                 <td align=center width=50px>
                 <center>
-                    <span style="font-size:20px"><a href='mailto:kaushikb258@ford.com'>[kaushikb258@ford.com]</a></span>
+                    <span style="font-size:20px"><a href='mailto:kaushikb258@ford.com'>[kaushikb258@ford.com]&nbsp&nbsp</a></span>
                 </center>
                 </td>
                 <td align=center width=50px>
                 <center>
-                    <span style="font-size:20px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]</a></span>
+                    <span style="font-size:20px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]&nbsp&nbsp</a></span>
                 </center>
                 </td>
                 <td align=center width=50px>
@@ -194,9 +194,9 @@ body {
     factory floor and last-mile delivery robots.
     </p>
     <br>
-
+    
     <div align="center">
-        <img class="img" src="resources/problemDefFig.png" 
+        <img class="img" width=100% src="resources/problemDefFig.png" 
                     alt="vae-rl"/>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
             Figure - Top: waypoints generated between desired start and target locations by the A* algorithm. 
@@ -213,7 +213,7 @@ body {
 </div> -->
 
 <!-- <div>
-    <img class="img" src="resources/demo.gif" 
+    <img class="img" width=100% src="resources/demo.gif" 
                 alt="CubifAE-3D Teaser"/>
 </div> -->
 
@@ -228,7 +228,6 @@ body {
 	</div>
 </div> -->
 
-<div class="row">
 <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
 <br><br>
 <h2 class="page-header">Problem Statement</h2>
@@ -251,36 +250,35 @@ body {
         perception needs to be re-learned every time a new task is learned. These advantages 
         have the potential to speed-up the overall learning of the task at hand.
     </p>
-</div> </div>
+</div> 
 
-<div class="row">
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br><br>
-    <h2 class="page-header">Our Solution</h2>
-    
-    <br/>
-        <p>The recently released Habitat simulator [1] has generated excitement in 
-            the field of RGBD vision-based robot navigation in indoor environments. 
-            In our solution, we train DRL agents for the problem of indoor robot navigation 
-            in the Habitat environment by separating perception (i.e., representation learning) 
-            and control (i.e., navigation policy). We use a VAE to encode RGB and Depth images, 
-            and use these latent encodings as well as a reading and heading angle for the target 
-            (from the PointGoal sensor), to learn navigation policies. Additionally, we use a 
-            traditional path-planner, A* to assist the DRL agent during training, by following 
-            a pre-determined curriculum. A* guides the agent by giving it shorter-distance goal 
-            locations (waypoints) between the original start and target locations. We experiment 
-            with two different curriculum-based training of the DRL agents, one by decreasing the 
-            number of intermediate waypoints used (termed the SWP-N agent) or by moving the 
-            episodic goal farther away from the start position (termed the FWP agent). 
-            We describe the problem and our method in more detail in our paper. In summary, 
-            our contributions are as follows: (1) a principled approach to compare different 
-            navigation-agnostic VAE-based perception embeddings for their usefulness to a DRL 
-            in learning a subsequent navigation policy; (2) Using a traditional A* path-planning 
-            algorithm in a curriculum fashion to assist in the training process of this navigation policy. 
-            This two-step procedure helps in the speed-up of the overall training of the policy network 
-            to learn robust navigation policies.
-        </p>
-</div></div>
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">Our Solution</h2>
+
+<br/>
+    <p>The recently released Habitat simulator [1] has generated excitement in 
+        the field of RGBD vision-based robot navigation in indoor environments. 
+        In our solution, we train DRL agents for the problem of indoor robot navigation 
+        in the Habitat environment by separating perception (i.e., representation learning) 
+        and control (i.e., navigation policy). We use a VAE to encode RGB and Depth images, 
+        and use these latent encodings as well as a reading and heading angle for the target 
+        (from the PointGoal sensor), to learn navigation policies. Additionally, we use a 
+        traditional path-planner, A* to assist the DRL agent during training, by following 
+        a pre-determined curriculum. A* guides the agent by giving it shorter-distance goal 
+        locations (waypoints) between the original start and target locations. We experiment 
+        with two different curriculum-based training of the DRL agents, one by decreasing the 
+        number of intermediate waypoints used (termed the SWP-N agent) or by moving the 
+        episodic goal farther away from the start position (termed the FWP agent). 
+        We describe the problem and our method in more detail in our paper. In summary, 
+        our contributions are as follows: (1) a principled approach to compare different 
+        navigation-agnostic VAE-based perception embeddings for their usefulness to a DRL 
+        in learning a subsequent navigation policy; (2) Using a traditional A* path-planning 
+        algorithm in a curriculum fashion to assist in the training process of this navigation policy. 
+        This two-step procedure helps in the speed-up of the overall training of the policy network 
+        to learn robust navigation policies.
+    </p>
+</div>
 
 <div class="container">
     <div class="embed-responsive">
@@ -289,48 +287,45 @@ body {
     </div>
 </div>
 
-<div class="row">
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">The PointNav task</h2>
 
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br><br>
-    <h2 class="page-header">The PointNav task</h2>
-    
-    <br/>
-        <p>We use the Habitat simulator [1] to train our DRL to learn policies for the 
-            point-goal navigation task in the Gibson environment [2]. The robot/agent 
-            is equipped with an RGBD camera, a point-goal sensor and a heading sensor. 
-            The point-goal sensor is like an indoor GPS: it provides the agent with its 
-            current position and the relative position of the target location. 
-            The heading sensor provides the current global heading angle of the agent. 
-            In the pointgoal navigation task, the agent is asked to navigate from the initial 
-            starting position to the required end position using only its RGBD, heading 
-            and point-goal sensors and without a map. These start and target locations are 
-            randomly initialized at the beginning of each episode, for which no straight line 
-            path is possible. The agent needs to learn navigation strategies that avoid obstacles 
-            and negotiate doorways since the start and target locations can be in different rooms. 
-        </p>
-</div></div>
+<br/>
+    <p>We use the Habitat simulator [1] to train our DRL to learn policies for the 
+        point-goal navigation task in the Gibson environment [2]. The robot/agent 
+        is equipped with an RGBD camera, a point-goal sensor and a heading sensor. 
+        The point-goal sensor is like an indoor GPS: it provides the agent with its 
+        current position and the relative position of the target location. 
+        The heading sensor provides the current global heading angle of the agent. 
+        In the pointgoal navigation task, the agent is asked to navigate from the initial 
+        starting position to the required end position using only its RGBD, heading 
+        and point-goal sensors and without a map. These start and target locations are 
+        randomly initialized at the beginning of each episode, for which no straight line 
+        path is possible. The agent needs to learn navigation strategies that avoid obstacles 
+        and negotiate doorways since the start and target locations can be in different rooms. 
+    </p>
+</div>
 
-<div class="row">
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br><br>
-    <h2 class="page-header">Twin-VAE (Representation Learning)</h2>
-    
-    <br/>
-        <p>We pre-train perception in the environment by using a twin-VAE setup as 
-            shown in the figure below. RGBD cameras are initialized randomly in the 
-            environment, and at each location, RGB and depth images are collected. 
-            These images are used to train the RGB and depth encoder-decoder branches 
-            (blue and purple in the figure). Once the VAE is pre-trained, only its 
-            encoders are used for training the DRL policy. RGB and depth images are encoded 
-            to their respective embeddings, which are concatenated to provide the final visual 
-            embedding from the camera. This embedding is used for training the DRL policy.  
-        </p>
-</div></div>
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">Twin-VAE (Representation Learning)</h2>
+
+<br/>
+    <p>We pre-train perception in the environment by using a twin-VAE setup as 
+        shown in the figure below. RGBD cameras are initialized randomly in the 
+        environment, and at each location, RGB and depth images are collected. 
+        These images are used to train the RGB and depth encoder-decoder branches 
+        (blue and purple in the figure). Once the VAE is pre-trained, only its 
+        encoders are used for training the DRL policy. RGB and depth images are encoded 
+        to their respective embeddings, which are concatenated to provide the final visual 
+        embedding from the camera. This embedding is used for training the DRL policy.  
+    </p>
+</div>
 
 
 <div align="center">
-    <img class="img" src="resources/vae-rl.png" 
+    <img class="img" width=100% src="resources/vae-rl.png" 
                 alt="vae-rl"/>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
         Figure - A twin (RGB-depth) VAE learns an embedded representation of the environment, 
@@ -339,142 +334,138 @@ body {
     </i></p>
 </div>
 
-<div class="row">
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br><br>
-    <h2 class="page-header">A* Curriculum Learning </h2>
-    
-    <br/>
-        <p>The task of learning the DRL policy is assisted by incrementally increasing the 
-            difficulty of the PointNav task. We do this during training by using A* to 
-            determine an optimal path between start and target locations in the bird’s eye 
-            view (BeV) map of the environment. A new sub-goal, a point to navigate to, 
-            that is on this A* path, is provided to the DRL. This sub-goal is close to the 
-            starting location to begin with, and then as training progresses, gets farther and 
-            farther away from it. We test the following variants of curriculum learning based 
-            on discrete and continuous subdivisions of the path:
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">A* Curriculum Learning </h2>
 
-            <br><br>
-            <b>1) WP-N</b>: In Way-point-N or WP-N, the A* path is divided into N equidistant 
-            waypoints (WPs) including the target location. At the beginning of the training 
-            episode, the agent is asked to navigate to the first WP. When it reaches within 
-            0.2m of this WP, the goal is revised to the next one and so on till the final 
-            target location. We investigate the number of intermediate waypoints required 
-            for successful navigation by experimenting with WP-10, WP-8, WP-6. WP-4, WP-3 and 
-            WP-2. WP-1 involves no subdivisions of the path and is the same as the original 
-            PointNav task. 
-
-            <br><br>
-            <b>2) SWP-N</b>: Sequential WP-N or SWP-N involves keeping the number of 
-            WPs constant for a fixed number (few thousand) episodes. This is the same as WP-N, 
-            where the agent is asked to navigate from the 1st to the Nth waypoint within the 
-            same episode. However, N decreases episodically. Once the agent has mastered a 
-            higher N, requiring a smaller length sub-path traversal, the agent is subjected 
-            to a lower N, requiring a larger length sub-path traversal.
-            
-            <br><br>
-            <b>3) FWP</b>: Farther Waypoint involves only one WP that moves farther and farther 
-            away from the start in continuous, linear increments, as training progresses. 
-            The training is commenced with the WP at 20% distance along the A* path from the 
-            start. Over the course of training, this WP is moved farther and farther along 
-            the path until it is at 120% of the distance from the start to target after several 
-            tens of thousands of episodes, at which point the FWP problem is the same as the PointNav problem.   
-        </p>
-</div></div>
-
-<div class="row">
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br><br>
-    <h2 class="page-header">DRL Training (Control Learning)</h2>
-    
-    <br/>
-        <p>At any time instant, the sensory readings of the RGB and Depth images are encoded into 
-            one-dimensional vectors/embeddings using the pre-trained twin VAEs. These are then 
-            concatenated with the pointgoal sensor reading, and the heading angle, to obtain a 
-            compact representation of the state at time instant t, st. We use Deep Reinforcement 
-            Learning (DRL) to learn a policy πθ that outputs action at the time t: at = πθ(st), 
-            where the actions are one of three: (1) move forward by 0.25 m; (2) turn left by 
-            10 degrees; (3) turn right by 10 degrees. A fourth action called “Done” is executed 
-            whenever the agent is within 0.2 m from the goal position. Specifically, the 
-            Proximal Policy Optimization (PPO) algorithm is used with the policy network being a 
-            neural network with fully connected layers and an LSTM for temporal information. 
-            See our paper for more details on the architecture used for the neural networks.  
-        </p>
-</div></div>
-
-<div class="row">
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
-    <br><br>
-    <h2 class="page-header">Results</h2>
-    
-    <br/>
-        <p>The success-weighted path length (SPL) is the metric we use to assess the performance 
-            of the agents. It is a real number between 0 and 1, with 1 indicating the robot 
-            navigated from start to goal location using the most optimal path. See [1] for more 
-            details on SPL. We show below the training curves for three agents: PointNav, SWP and FWP. 
-            As evident, the SWP and FWP agents learn faster than the PointNav agent, and so DRL agents 
-            learn faster when provided with a curriculum. While we have considered a fixed, 
-            pre-determined curriculum to follow, in the future one can consider a dynamic curriculum 
-            where the curriculum changes based on the progress made by the agent to learn the task.  
-        </p>
-
-        <div align="center">
-            <img class="img" src="resources/swp_fwp.png" 
-                        alt="swp_fwp"/>
-            <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-                Figure - Success-weighted path length (SPL) over successive episodes.
-            </i></p>
-        </div>
+<br/>
+    <p>The task of learning the DRL policy is assisted by incrementally increasing the 
+        difficulty of the PointNav task. We do this during training by using A* to 
+        determine an optimal path between start and target locations in the bird’s eye 
+        view (BeV) map of the environment. A new sub-goal, a point to navigate to, 
+        that is on this A* path, is provided to the DRL. This sub-goal is close to the 
+        starting location to begin with, and then as training progresses, gets farther and 
+        farther away from it. We test the following variants of curriculum learning based 
+        on discrete and continuous subdivisions of the path:
 
         <br><br>
-        <p>Here are some top-down views showing sample trajectories of the three agents: SWP, FWP and PN (PointNav) 
-            for the same start and end locations. The trajectories taken are different and the final SPL, 
-            the metric we use to assess performance at test time, is superior for SWP and FWP agents compared to the baseline PN agent. 
-        </p>
+        <b>1) WP-N</b>: In Way-point-N or WP-N, the A* path is divided into N equidistant 
+        waypoints (WPs) including the target location. At the beginning of the training 
+        episode, the agent is asked to navigate to the first WP. When it reaches within 
+        0.2m of this WP, the goal is revised to the next one and so on till the final 
+        target location. We investigate the number of intermediate waypoints required 
+        for successful navigation by experimenting with WP-10, WP-8, WP-6. WP-4, WP-3 and 
+        WP-2. WP-1 involves no subdivisions of the path and is the same as the original 
+        PointNav task. 
 
-        <div class="row">
-            <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
-                <!-- Photo Grid -->
-                <div class="row"> 
-                    <div class="column">
-                        <img src="resources/compare_72a.png" style="width:120%"><br>(a)</br>
-                        <img src="resources/compare_78a.png" style="width:120%"><br>(e)</br>
-                    </div>
-                    <div class="column">
-                        <img src="resources/compare_293a.png" style="width:120%"><br>(b)</br>
-                        <img src="resources/compare_259a.png" style="width:120%"><br>(f)</br>
-                    </div>
-                    <div class="column">
-                        <img src="resources/compare_334a.png" style="width:120%"><br>(c)</br>
-                        <img src="resources/compare_295a.png" style="width:120%"><br>(g)</br>
-                    </div>
-                    <div class="column">
-                        <img src="resources/compare_209a.png" style="width:120%"><br>(d)</br>
-                        <img src="resources/compare_148a.png" style="width:120%"><br>(h)</br>
-                    </div>
-                </div>
-                <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-                    Figure - Test time paths traced by the PointNav, SWP-10 and FWP agents for different episodes. 
-                    The start and target positions are represented by the green and blue squares respectively. 
-                    The paths traced are shown in red for PointNav, yellow for SWP and purple for the FWP agents. 
-                    The SPL values for the three agents for the respective episode are also shown in each sub-figure. 
-                </i></p>
-            </div>
-        </div>
-</div></div>
+        <br><br>
+        <b>2) SWP-N</b>: Sequential WP-N or SWP-N involves keeping the number of 
+        WPs constant for a fixed number (few thousand) episodes. This is the same as WP-N, 
+        where the agent is asked to navigate from the 1st to the Nth waypoint within the 
+        same episode. However, N decreases episodically. Once the agent has mastered a 
+        higher N, requiring a smaller length sub-path traversal, the agent is subjected 
+        to a lower N, requiring a larger length sub-path traversal.
+        
+        <br><br>
+        <b>3) FWP</b>: Farther Waypoint involves only one WP that moves farther and farther 
+        away from the start in continuous, linear increments, as training progresses. 
+        The training is commenced with the WP at 20% distance along the A* path from the 
+        start. Over the course of training, this WP is moved farther and farther along 
+        the path until it is at 120% of the distance from the start to target after several 
+        tens of thousands of episodes, at which point the FWP problem is the same as the PointNav problem.   
+    </p>
+</div>
 
-<div class="row">
-    <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">DRL Training (Control Learning)</h2>
+
+<br/>
+    <p>At any time instant, the sensory readings of the RGB and Depth images are encoded into 
+        one-dimensional vectors/embeddings using the pre-trained twin VAEs. These are then 
+        concatenated with the pointgoal sensor reading, and the heading angle, to obtain a 
+        compact representation of the state at time instant t, st. We use Deep Reinforcement 
+        Learning (DRL) to learn a policy πθ that outputs action at the time t: at = πθ(st), 
+        where the actions are one of three: (1) move forward by 0.25 m; (2) turn left by 
+        10 degrees; (3) turn right by 10 degrees. A fourth action called “Done” is executed 
+        whenever the agent is within 0.2 m from the goal position. Specifically, the 
+        Proximal Policy Optimization (PPO) algorithm is used with the policy network being a 
+        neural network with fully connected layers and an LSTM for temporal information. 
+        See our paper for more details on the architecture used for the neural networks.  
+    </p>
+</div>
+
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">Results</h2>
+
+<br/>
+    <p>The success-weighted path length (SPL) is the metric we use to assess the performance 
+        of the agents. It is a real number between 0 and 1, with 1 indicating the robot 
+        navigated from start to goal location using the most optimal path. See [1] for more 
+        details on SPL. We show below the training curves for three agents: PointNav, SWP and FWP. 
+        As evident, the SWP and FWP agents learn faster than the PointNav agent, and so DRL agents 
+        learn faster when provided with a curriculum. While we have considered a fixed, 
+        pre-determined curriculum to follow, in the future one can consider a dynamic curriculum 
+        where the curriculum changes based on the progress made by the agent to learn the task.  
+    </p>
+
+    <div align="center">
+        <img class="img" width=100% src="resources/swp_fwp.png" 
+                    alt="swp_fwp"/>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+            Figure - Success-weighted path length (SPL) over successive episodes.
+        </i></p>
+    </div>
+
     <br><br>
-    <h2 class="page-header">References</h2>
-    
-    <br/>
-        <p>
-            [1] Savva, Manolis, et al. "Habitat: A platform for embodied ai research." Proceedings of the IEEE International Conference on Computer Vision. 2019.   
-            <br>
-            [2] Xia, Fei, et al. "Gibson env: Real-world perception for embodied agents." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018. 
-        </p>
-</div></div>
+    <p>Here are some top-down views showing sample trajectories of the three agents: SWP, FWP and PN (PointNav) 
+        for the same start and end locations. The trajectories taken are different and the final SPL, 
+        the metric we use to assess performance at test time, is superior for SWP and FWP agents compared to the baseline PN agent. 
+    </p>
+
+    <div class="row">
+        <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+            <!-- Photo Grid -->
+            <div class="row"> 
+                <div class="column">
+                    <img src="resources/compare_72a.png" style="width:120%"><br>(a)</br>
+                    <img src="resources/compare_78a.png" style="width:120%"><br>(e)</br>
+                </div>
+                <div class="column">
+                    <img src="resources/compare_293a.png" style="width:120%"><br>(b)</br>
+                    <img src="resources/compare_259a.png" style="width:120%"><br>(f)</br>
+                </div>
+                <div class="column">
+                    <img src="resources/compare_334a.png" style="width:120%"><br>(c)</br>
+                    <img src="resources/compare_295a.png" style="width:120%"><br>(g)</br>
+                </div>
+                <div class="column">
+                    <img src="resources/compare_209a.png" style="width:120%"><br>(d)</br>
+                    <img src="resources/compare_148a.png" style="width:120%"><br>(h)</br>
+                </div>
+            </div>
+            <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+                Figure - Test time paths traced by the PointNav, SWP-10 and FWP agents for different episodes. 
+                The start and target positions are represented by the green and blue squares respectively. 
+                The paths traced are shown in red for PointNav, yellow for SWP and purple for the FWP agents. 
+                The SPL values for the three agents for the respective episode are also shown in each sub-figure. 
+            </i></p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
+<br><br>
+<h2 class="page-header">References</h2>
+
+<br/>
+    <p>
+        [1] Savva, Manolis, et al. "Habitat: A platform for embodied ai research." Proceedings of the IEEE International Conference on Computer Vision. 2019.   
+        <br>
+        [2] Xia, Fei, et al. "Gibson env: Real-world perception for embodied agents." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018. 
+    </p>
+</div>
 
 <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
 <br>
