@@ -55,6 +55,11 @@
     BODY {
         TEXT-ALIGN: center
     }
+    
+    img {
+        width:100%;
+        max-width:720px;
+    }
 </style>
 
 <style>
@@ -196,9 +201,9 @@ body {
     <br>
     
     <div align="center">
-        <img class="img" width=100% src="resources/problemDefFig.png" 
+        <img class="img" src="resources/problemDefFig.png" 
                     alt="vae-rl"/>
-        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:100%;text-align:center"><i>
             Figure - Top: waypoints generated between desired start and target locations by the A* algorithm. 
             This work looks at assisting the training of a DRL-based robot navigation policy, by incrementally 
             increasing the difficulty of the navigation task in a curriculum. Bottom: 3 curriculum training 
@@ -213,7 +218,7 @@ body {
 </div> -->
 
 <!-- <div>
-    <img class="img" width=100% src="resources/demo.gif" 
+    <img class="img" src="resources/demo.gif" 
                 alt="CubifAE-3D Teaser"/>
 </div> -->
 
@@ -278,14 +283,17 @@ body {
         This two-step procedure helps in the speed-up of the overall training of the policy network 
         to learn robust navigation policies.
     </p>
-</div>
 
-<div class="container">
-    <div class="embed-responsive">
-    <iframe src="https://www.youtube.com/embed/btPQn5m5xys"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="container">
+        <div class="embed-responsive">
+            <p>hello</p>
+        <iframe src="https://www.youtube.com/embed/btPQn5m5xys"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 </div>
+
 
 <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
 <br><br>
@@ -325,7 +333,7 @@ body {
 
 
 <div align="center">
-    <img class="img" width=100% src="resources/vae-rl.png" 
+    <img class="img" src="resources/vae-rl.png" 
                 alt="vae-rl"/>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
         Figure - A twin (RGB-depth) VAE learns an embedded representation of the environment, 
@@ -411,7 +419,7 @@ body {
     </p>
 
     <div align="center">
-        <img class="img" width=100% src="resources/swp_fwp.png" 
+        <img class="img" src="resources/swp_fwp.png" 
                     alt="swp_fwp"/>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
             Figure - Success-weighted path length (SPL) over successive episodes.
