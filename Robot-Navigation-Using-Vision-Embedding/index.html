@@ -91,7 +91,30 @@ p {
 body {
   font-size: 20px;
 }
+
+.container {
+    height: 100%;
+}
+.embed-responsive {
+    position: relative;
+    left: 0; right: 0;
+    top: 50%;
+    margin-top: 0;
+    /* video height / video width */
+    padding-bottom: 56.2%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 </style>
+
+
 
 <!-- Page Content -->
 <!-- Marketing Icons Section -->
@@ -259,9 +282,15 @@ body {
         </p>
 </div></div>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/btPQn5m5xys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="container">
+    <div class="embed-responsive">
+    <iframe src="https://www.youtube.com/embed/btPQn5m5xys"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
 
 <div class="row">
+
     <div class="col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2 text-justify">
     <br><br>
     <h2 class="page-header">The PointNav task</h2>
