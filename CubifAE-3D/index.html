@@ -106,21 +106,8 @@ body {
             <a href="https://www.linkedin.com/in/punarjay-chakravarty/">Punarjay Chakravarty</a></i></h3>
         <h5 class="text-center"> Ford Greenfield Labs, Palo Alto </h5>
         
-        <div class="row">
-            <table align=center width=320px>
-                <tr>
-                <td align=center width=50px>
-                <center>
-                    <span style="font-size:20px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]&nbsp&nbsp</a></span>
-                </center>
-                </td>
-                <td align=center width=50px>
-                <center>
-                    <span style="font-size:20px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]</a></span>
-                </center>
-                </td>
-            </table>
-        </div>
+        <span style="font-size:20px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]&nbsp</a></span>
+        <span style="font-size:20px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]</a></span>
 
         
 </div>
@@ -168,7 +155,7 @@ body {
 </div> -->
 
 <div>
-    <img style="width:100%;max-width:1000px" class="img" src="resources/demo.gif" 
+    <img style="width:90%;max-width:1000px" class="img" src="resources/demo.gif" 
                 alt="CubifAE-3D Teaser"/>
     <br><br><br><br>
 </div>
@@ -201,9 +188,9 @@ body {
         to further filter out the object pose predictions with high <i>IoU</i> by retaining only the objects with the highest <i>confidence</i>.
     </p>
 
-    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="resources/detailed_model_architecture_w_classifier.png" alt="CubifAE-3D"/>
+    <div align="center"><img  style="width:100%;max-width:1000px" class="img-responsive" src="resources/detailed_model_architecture_w_classifier.png" alt="CubifAE-3D"/>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:90%;text-align:center"><i>
-        Detailed model architecture of <b>CubifAE-3D</b>. The RGB-to-depth auto-encoder (top branch) is first trained 
+        Figure - Detailed model architecture of <b>CubifAE-3D</b>. The RGB-to-depth auto-encoder (top branch) is first trained 
         in a supervised way with a combination of MSE and Edge-Aware Smoothing Loss. Once trained, 
         the decoder is detached, encoder weights are frozen, and the encoder output is fed to the 3DOD model (middle branch), 
         which is trained to regress the parameters of object poses. A 2D bounding-box is obtained for each object 
@@ -221,9 +208,9 @@ body {
         center of the ego-camera.
     </p>
 
-    <div align="center"><img  style="max-width:70%;max-height:70%" class="img-responsive" src="resources/camera_world.png" alt="CubifAE-3D"/>
+    <div align="center"><img  style="width:100%;max-width:1000px" class="img-responsive" src="resources/camera_world.png" alt="CubifAE-3D"/>
         <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-            <i>Cubification</i> of the camera space: The perception region of interest is divided into a 4x4xM grid (4x4 in the x and y directions 
+            <i>Figure - Cubification</i> of the camera space: The perception region of interest is divided into a 4x4xM grid (4x4 in the x and y directions 
             aligned with the camera image plane, where each grid has stacked on it, M cuboids in the z direction). Each cuboid is responsible 
             for predicting up to N object poses. The object coordinates and dimensions are then normalized between 0 and 1 in accordance with a 
             prior that is computed from data statistics.</i></p>
@@ -254,7 +241,7 @@ body {
         </div>
     </div>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-        Qualitative results on the KITTI dataset. The top part of each image shows a bounding box obtained 
+        Figure - Qualitative results on the KITTI dataset. The top part of each image shows a bounding box obtained 
         as a 2D projection of their 3D poses (red: car, yellow: truck, green: van, blue: pedestrian, cyan: tram, cyclist, and others). 
         The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle positioned at the center 
         of red circle drawn on the left; pointing towards the right of the image. 
@@ -280,7 +267,7 @@ body {
         </div>
     </div>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-        Qualitative results on the nuScenes dataset across various scenes and lighting conditions. 
+        Figure - Qualitative results on the nuScenes dataset across various scenes and lighting conditions. 
         The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
         (red: car, yellow: truck, green: motorcycle, blue: pedestrian, cyan: bus, bicycle, and others). 
         The bottom part (black background) shows a birds-eye view of the object poses with the ego-vehicle 
@@ -309,7 +296,7 @@ body {
         </div>
     </div>
     <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-        Qualitative results on the Virtual KITTI 2 dataset across various scenes, weather, and lighting conditions. 
+        Figure - Qualitative results on the Virtual KITTI 2 dataset across various scenes, weather, and lighting conditions. 
         The top part of each image shows a bounding box obtained as a 2D projection of their 3D poses 
         (red: car, yellow: truck, cyan: van). The bottom part (black background) shows a birds-eye view of the object poses 
         with the ego-vehicle positioned at the center of red circle drawn on the left; pointing towards the right of the image. 

@@ -132,26 +132,9 @@ body {
             </i></h3>
         <h5 class="text-center"> Ford Greenfield Labs, Palo Alto </h5>
         
-        <div class="row">
-            <table align=center width=320px>
-                <tr>
-                <td align=center width=50px>
-                <center>
-                    <span style="font-size:20px"><a href='mailto:kaushikb258@ford.com'>[kaushikb258@ford.com]&nbsp&nbsp</a></span>
-                </center>
-                </td>
-                <td align=center width=50px>
-                <center>
-                    <span style="font-size:20px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]&nbsp&nbsp</a></span>
-                </center>
-                </td>
-                <td align=center width=50px>
-                <center>
-                    <span style="font-size:20px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]</a></span>
-                </center>
-                </td>
-            </table>
-        </div>
+        <span style="font-size:20px"><a href='mailto:kaushikb258@ford.com'>[kaushikb258@ford.com]&nbsp</a></span>
+        <span style="font-size:20px"><a href='mailto:pchakra5@ford.com'>[pchakra5@ford.com]&nbsp</a></span>
+        <span style="font-size:20px"><a href='mailto:sshriva5@ford.com'>[sshriva5@ford.com]</a></span>
 
         
 </div>
@@ -170,7 +153,7 @@ body {
 		<td align=left width=50px>
         <span style="font-size:24px">Paper</span>
         <p style="font-family:serif;color:gray;width:80%;text-align:left">
-            <strong><a href='resources/vae-rl.pdf'>arXiv:tbd</a></strong></p>
+            <strong><a href='https://arxiv.org/abs/2101.01774'>arXiv:2101.01774</a></strong></p>
 		</td>
 	</table>
 </div>
@@ -432,34 +415,32 @@ body {
         the metric we use to assess performance at test time, is superior for SWP and FWP agents compared to the baseline PN agent. 
     </p>
 
-    <div class="row">
-        <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
-            <!-- Photo Grid -->
-            <div class="row"> 
-                <div class="column">
-                    <img src="resources/compare_72a.png" style="width:120%"><br>(a)</br>
-                    <img src="resources/compare_78a.png" style="width:120%"><br>(e)</br>
-                </div>
-                <div class="column">
-                    <img src="resources/compare_293a.png" style="width:120%"><br>(b)</br>
-                    <img src="resources/compare_259a.png" style="width:120%"><br>(f)</br>
-                </div>
-                <div class="column">
-                    <img src="resources/compare_334a.png" style="width:120%"><br>(c)</br>
-                    <img src="resources/compare_295a.png" style="width:120%"><br>(g)</br>
-                </div>
-                <div class="column">
-                    <img src="resources/compare_209a.png" style="width:120%"><br>(d)</br>
-                    <img src="resources/compare_148a.png" style="width:120%"><br>(h)</br>
-                </div>
+    <div align="center" class="col-xs-12 col-md-8 col-md-8 col-sm-12 col-md-offset-2 col-lg-offset-2">
+        <!-- Photo Grid -->
+        <div class="row"> 
+            <div class="column">
+                <img src="resources/compare_72a.png" style="width:120%"><br>(a)</br>
+                <img src="resources/compare_78a.png" style="width:120%"><br>(e)</br>
             </div>
-            <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
-                Figure - Test time paths traced by the PointNav, SWP-10 and FWP agents for different episodes. 
-                The start and target positions are represented by the green and blue squares respectively. 
-                The paths traced are shown in red for PointNav, yellow for SWP and purple for the FWP agents. 
-                The SPL values for the three agents for the respective episode are also shown in each sub-figure. 
-            </i></p>
+            <div class="column">
+                <img src="resources/compare_293a.png" style="width:120%"><br>(b)</br>
+                <img src="resources/compare_259a.png" style="width:120%"><br>(f)</br>
+            </div>
+            <div class="column">
+                <img src="resources/compare_334a.png" style="width:120%"><br>(c)</br>
+                <img src="resources/compare_295a.png" style="width:120%"><br>(g)</br>
+            </div>
+            <div class="column">
+                <img src="resources/compare_209a.png" style="width:120%"><br>(d)</br>
+                <img src="resources/compare_148a.png" style="width:120%"><br>(h)</br>
+            </div>
         </div>
+        <p style="font-family:'Times New Roman', Times, serif;color:#12006c;width:80%;text-align:center"><i>
+            Figure - Test time paths traced by the PointNav, SWP-10 and FWP agents for different episodes. 
+            The start and target positions are represented by the green and blue squares respectively. 
+            The paths traced are shown in red for PointNav, yellow for SWP and purple for the FWP agents. 
+            The SPL values for the three agents for the respective episode are also shown in each sub-figure. 
+        </i></p>
     </div>
 </div>
 
@@ -480,8 +461,13 @@ body {
 <h2>Citation</h2>
 
 <pre>
-@misc{
-
+@misc{balakrishnan2021a,
+      title={An A* Curriculum Approach to Reinforcement Learning for RGBD Indoor Robot Navigation}, 
+      author={Kaushik Balakrishnan and Punarjay Chakravarty and Shubham Shrivastava},
+      year={2021},
+      eprint={2101.01774},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
 }
 </pre>																
 </div>
